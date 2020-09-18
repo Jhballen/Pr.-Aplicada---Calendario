@@ -1,0 +1,28 @@
+<StackLayout class="form" >
+
+    <StackLayout>
+        <Image class="logotipo" src="~/Recursos/logo.png"></Image>
+    </StackLayout>
+    
+    <label class="header" text="TimePoint"></label>
+
+    <StackLayout class="entradas" >
+        <TextField class="entradaUser"hint="Nombre Completo"[text]='name'secure="false" ></TextField>
+    </StackLayout>
+
+    <StackLayout class="entradas" >
+        <TextField class="entradaUser"hint="Correo"[text]='name'secure="false"   ></TextField>
+    </StackLayout>
+
+    <StackLayout class="entradas" >
+        <TextField class="entradaUser"hint="Contraseña"[text]='name'secure="true"></TextField>
+    </StackLayout>
+    <StackLayout>
+        <button class="botonlog" (tap)="onNavigate()" text="Registrar"></button>
+    </StackLayout>
+
+    
+    <label class="registrar"(tap)="onBack()" text="Inicia Sesion!"></label>
+</StackLayout>
+  
+
