@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const {ObjectId} = require('mongoose');
 //SE INSTALO EL MONGOOSE-TYPE-EMAIL
 require('mongoose-type-email');
 const { Schema } = mongoose;
@@ -10,7 +11,7 @@ const userSchema = new Schema({
     mail: mongoose.SchemaTypes.Email,
     password: String,
     profilePicture: Number,
-    tasks: [Task]
+    tasks: [{type: ObjectId, ref:Task }]
 });
 
-module.exports = ('users',userSchema);
+module.exports = mongoose.model('users',userSchema);

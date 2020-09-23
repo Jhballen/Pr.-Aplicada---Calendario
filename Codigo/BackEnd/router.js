@@ -10,6 +10,7 @@ router.post('/task', taskController.post);
 
 
 //USER
-
+router.get('/user', userController.getAll);
+router.post('/user', userController.post);
 
 module.exports = router;
