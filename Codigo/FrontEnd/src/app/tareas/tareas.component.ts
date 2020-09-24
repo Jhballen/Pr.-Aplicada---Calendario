@@ -3,21 +3,25 @@ import { RadSideDrawer } from "nativescript-ui-sidedrawer";
 import * as app from "tns-core-modules/application";
 
 @Component({
-    selector: "prueba",
-    templateUrl: "./prueba.component.html"
+    selector: "tareas",
+    templateUrl: "./tareas.component.html",
+    styleUrls:["./tareas.component.css"]
+
 })
-export class pruebaComponent implements OnInit {
+export class tareasComponent implements OnInit {
 
     constructor() {
         // Use the component constructor to inject providers.
     }
+    
 
-    ngOnInit(): void {
-
+    public ngOnInit(): void {
+       
     }
 
     onDrawerButtonTap(): void {
         const sideDrawer = <RadSideDrawer>app.getRootView();
         sideDrawer.showDrawer();
     }
+    
 }

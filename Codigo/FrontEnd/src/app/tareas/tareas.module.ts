@@ -1,19 +1,19 @@
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptCommonModule } from "nativescript-angular/common";
 
-import { pruebaRoutingModule } from "./prueba-routing.module";
-import { pruebaComponent } from "./prueba.component";
+import { tareasRoutingModule } from "./tareas-routing.module";
+import { tareasComponent } from "./tareas.component";
 
 @NgModule({
     imports: [
         NativeScriptCommonModule,
-        pruebaRoutingModule
+        tareasRoutingModule
     ],
     declarations: [
-        pruebaComponent
+        tareasComponent
     ],
     schemas: [
         NO_ERRORS_SCHEMA
     ]
 })
-export class pruebaModule { }
+export class tareasModule { }
