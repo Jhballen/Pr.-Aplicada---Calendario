@@ -1,0 +1,50 @@
+.corazon{
+    
+    width: 60;
+    height: 60;
+    align-self: center;
+}
+
+.label{
+
+     margin-left:25 ;
+     align-self: center;
+     font-size: 23;
+
+}
+
+.progressbar {
+    height: 35;
+    width: 90;
+    margin: 10;
+    border-radius: 10;
+    background-color: #ECEFF1;
+}
+.barra {
+    background-color: #51BC6B;
+    border-radius: 10;
+}
+.barra2 {
+    background-color:orange;
+    border-radius: 10;
+}
+
+.progressbar2 {
+    height: 30;
+    width: 100;
+    margin: 10;
+    border-radius: 10;
+    background-color: #ECEFF1;
+    
+}
+
+.flex{
+    border-top: black;
+    border-top-width: 2;
+    border-bottom: black;
+    border-bottom-width: 2;
+}
+
+.user{
+    margin:6;
+}

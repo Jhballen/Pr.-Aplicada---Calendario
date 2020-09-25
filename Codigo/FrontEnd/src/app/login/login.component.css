@@ -1,0 +1,47 @@
+.entradas{
+     
+    margin-bottom: 20;
+}
+
+.entradaUser{
+    font-size: 20;
+    placeholder-color:white;
+
+}
+.botonlog{
+    height: 50;
+    font-size: 20;
+    font-weight: 600;
+    background-color: red;
+}
+
+.registrar{
+    margin-top: 50;
+    text-align: center;
+    color: red;
+}
+
+.form{
+
+    
+
+    background-image: url("~/Recursos/fondo.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.header{
+    font-size: 25;
+    text-align: center;
+    color: red;
+    font-weight: 600;
+    margin-bottom: 60;
+    font-style: italic;
+}
+
+.logotipo{
+    margin-top: 50;
+    margin-right: 20;
+    width: 100;
+    height: 100;
+}
+
