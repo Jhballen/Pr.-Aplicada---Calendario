@@ -1,6 +1,7 @@
 
 const MongoClient = require('mongodb').MongoClient;
 const mongoose = require('mongoose');
+const { } = require('./keys');
 const uri = "mongodb+srv://Adminitrador:TimePoint123@timepointback.7kbtp.gcp.mongodb.net/baseDB-PracticaAplicada";
 const client = new MongoClient(uri, { useNewUrlParser: true,useUnifiedTopology: true });
 const db = mongoose.connection;
