@@ -11,7 +11,8 @@ const routes: Routes = [
     { path: "search", loadChildren: () => import("~/app/search/search.module").then((m) => m.SearchModule) },
     { path: "featured", loadChildren: () => import("~/app/featured/featured.module").then((m) => m.FeaturedModule) },
    { path: "settings", loadChildren: () => import("~/app/settings/settings.module").then((m) => m.SettingsModule) },
-    { path: "tareas", loadChildren: () => import("~/app/tareas/tareas.module").then((m) => m.tareasModule) }
+    { path: "tareas", loadChildren: () => import("~/app/tareas/tareas.module").then((m) => m.tareasModule) },
+    { path: "crear-tarea", loadChildren: () => import("~/app/crear-tareas/crear-tarea.module").then((m) => m.crearTareaModule) }
 ];
 
 @NgModule({
