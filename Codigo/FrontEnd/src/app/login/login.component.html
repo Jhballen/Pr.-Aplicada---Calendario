@@ -8,11 +8,11 @@
     <label class="header" text="TimePoint"></label>
 
     <StackLayout class="entradas" >
-        <TextField class="entradaUser"hint="Correo"[text]='name'secure="false"   ></TextField>
+        <TextField class="entradaUser"hint="Correo"[text]='name'secure="false"  [{ngModel}] ="this.user.email" ></TextField>
     </StackLayout>
 
     <StackLayout class="entradas" >
-        <TextField class="entradaUser"hint="Contraseña"[text]='name'secure="true"></TextField>
+        <TextField class="entradaUser"hint="Contraseña"[text]='name'secure="true"   [{ngModel}] ="this.user.password" ></TextField>
     </StackLayout>
     <StackLayout>
         <button class="botonlog" (tap)="onNavigate()" text="Logear"></button>
