@@ -4,7 +4,8 @@ import { NativeScriptCommonModule } from "nativescript-angular/common";
 import { loginRoutingModule } from "./login-routing-module";
 import { loginComponent } from "./login.component";
 
-
+import { User } from "../models/user.model";
+import { UserService } from "../services/user_service/user.services";
 
 @NgModule({
     imports: [
@@ -20,7 +21,8 @@ import { loginComponent } from "./login.component";
 })
 export class loginModule implements OnInit{ 
 
-    constructor(){
+
+    constructor(private userServices: UserService){
     }
 
     ngOnInit(): void {
