@@ -5,6 +5,7 @@ import { setTimeout } from "tns-core-modules/timer";
 import { Page } from "tns-core-modules/ui/page";
 import { UserService } from '../services/user_service/user.services';
 import { User } from '../models/user.model';
+import { enviroment } from '~/environment/env';
 
 
 @Component({
@@ -42,6 +43,7 @@ export class loginComponent implements OnInit{
         let user = this.userService.shearUser(this.userName, this.tempPassword).subscribe(
             (value: User)=>{
                 if(value.password == this.tempPassword){
+                    enviroment.user=value;
                     this.onNavigate();
                 }else {
                     console.log("NO REGISTRADO**************")

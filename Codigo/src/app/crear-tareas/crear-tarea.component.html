@@ -3,11 +3,11 @@
     <label class="header" text="Nueva Tarea"></label>
 
     <StackLayout class="tarea" >
-        <TextField class="entradaUser" hint="Titulo"></TextField>
+        <TextField [(ngModel)]="newTarea.title" class="entradaUser" hint="Titulo"></TextField>
     </StackLayout>
 
     <StackLayout class="tarea" >
-        <TextField class="entradaUser" hint="Descripción"></TextField>
+        <TextField [(ngModel)]="newTarea.description" class="entradaUser" hint="Descripción"></TextField>
     </StackLayout>
     
     <StackLayout class="tarea" >
@@ -18,6 +18,6 @@
     </StackLayout>
     
     <StackLayout>
-        <button class="botonCrear"  text="Crear"></button>
+        <button class="botonCrear" (tap)="createTask()" text="Crear"></button>
     </StackLayout>
 </StackLayout>
