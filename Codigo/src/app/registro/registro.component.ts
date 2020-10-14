@@ -5,7 +5,10 @@ import { setTimeout } from "tns-core-modules/timer";
 import { Page } from "tns-core-modules/ui/page";
 
 
-
+import { UserService } from "../services/user_service/user.services";
+import { User } from "../models/user.model";
+import { Task } from '../models/task.model';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 
 @Component({
@@ -17,10 +20,16 @@ import { Page } from "tns-core-modules/ui/page";
 
 export class registroComponent implements OnInit{
 
+    newUser: User;
+
     constructor(
+        private userService: UserService,
         private router: RouterExtensions,
         private page: Page
-    ){this.page.actionBarHidden = true;}
+    ){
+        this.page.actionBarHidden = true;
+        this.newUser = new User();
+    }
 
     
     ngOnInit(){}
@@ -34,50 +43,15 @@ export class registroComponent implements OnInit{
         this.router.back();
     }
 
-}
-export class UsageComponent {
-    name = "";
+    createUser(){
+        //DATOS DE INICIO PREDETERMINADOS
+        this.newUser.profilePicture = 0;
+        this.newUser.tasks = [new Task()];
+        this.newUser.type  = "usuario";
 
-    onReturnPress(args) {
-        // returnPress event will be triggered when user submits a value
-        let textField = <TextField>args.object;
-
-        // Gets or sets the placeholder text.
-        console.log(textField.hint);
-        // Gets or sets the input text.
-        console.log(textField.text);
-        // Gets or sets the secure option (e.g. for passwords).
-        console.log(textField.secure);
-
-        // Gets or sets the soft keyboard type. Options: "datetime" | "phone" | "number" | "url" | "email"
-        console.log(textField.keyboardType);
-        // Gets or sets the soft keyboard return key flavor. Options: "done" | "next" | "go" | "search" | "send"
-        console.log(textField.returnKeyType);
-        // Gets or sets the autocapitalization type. Options: "none" | "words" | "sentences" | "allcharacters"
-        console.log(textField.autocapitalizationType);
-
-        // Gets or sets a value indicating when the text property will be updated.
-        console.log(textField.updateTextTrigger);
-        // Gets or sets whether the instance is editable.
-        console.log(textField.editable);
-        // Enables or disables autocorrection.
-        console.log(textField.autocorrect);
-        // Limits input to a certain number of characters.
-        console.log(textField.maxLength);
-
-        setTimeout(() => {
-            textField.dismissSoftInput(); // Hides the soft input method, ususally a soft keyboard.
-        }, 100);
-    }
-
-    onFocus(args) {
-        // focus event will be triggered when the users enters the TextField
-        let textField = <TextField>args.object;
-    }
-
-    onBlur(args) {
-        // blur event will be triggered when the user leaves the TextField
-        let textField = <TextField>args.object;
+        //DATOS CONSULTADOS
+        this.userService.createUser(this.newUser);
+        this.onNavigate();
     }
 
 }

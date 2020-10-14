@@ -11,18 +11,18 @@
     </StackLayout>
 
     <StackLayout class="entradas" >
-        <TextField class="entradaUser"hint="Correo"[text]='name'secure="false"   [(ngModel)]="newUser.mail" ></TextField>
+        <TextField [(ngModel)]="newUser.mail" class="entradaUser"hint="Correo" secure="false"></TextField>
     </StackLayout>
 
     <StackLayout class="entradas" >
-        <TextField class="entradaUser"hint="Contraseña"[text]='name'secure="true" [(ngModel)]="newUser.password"></TextField>></TextField>
+        <TextField [(ngModel)]="newUser.password" class="entradaUser"hint="Contraseña" secure="true" ></TextField>
     </StackLayout>
     <StackLayout>
-        <button class="botonlog" (tap)="onNavigate()" text="Registrar"></button>
+        <button class="botonlog" (tap)="createUser()" text="Registrar"></button>
     </StackLayout>
 
     
-    <label class="registrar"(tap)="createUSer()" text="Inicia Sesion!"></label>
+    <label class="registrar"(tap)="onBack()" text="Inicia Sesion!"></label>
 </StackLayout>
   
 
