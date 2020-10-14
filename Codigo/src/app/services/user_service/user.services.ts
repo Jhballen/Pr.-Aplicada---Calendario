@@ -26,4 +26,8 @@ export class UserService {
             }
         );
     }
+
+    shearUser(name:String, pass: String){
+        return this.http.get <User> (`${enviroment.urlApi}/user/${name}`);
+    }
 }

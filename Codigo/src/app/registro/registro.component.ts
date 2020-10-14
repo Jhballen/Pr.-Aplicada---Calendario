@@ -46,9 +46,9 @@ export class registroComponent implements OnInit{
     createUser(){
         //DATOS DE INICIO PREDETERMINADOS
         this.newUser.profilePicture = 0;
-        this.newUser.tasks = [new Task()];
         this.newUser.type  = "usuario";
 
+        console.log(this.newUser);
         //DATOS CONSULTADOS
         this.userService.createUser(this.newUser);
         this.onNavigate();

@@ -4,13 +4,14 @@ import { NativeScriptCommonModule } from "nativescript-angular/common";
 import { loginRoutingModule } from "./login-routing-module";
 import { loginComponent } from "./login.component";
 
-import { User } from "../models/user.model";
 import { UserService } from "../services/user_service/user.services";
+import { NativeScriptFormsModule } from "nativescript-angular";
 
 @NgModule({
     imports: [
         NativeScriptCommonModule,
-        loginRoutingModule
+        loginRoutingModule,
+        NativeScriptFormsModule
     ],
     declarations: [
         loginComponent
@@ -22,7 +23,7 @@ import { UserService } from "../services/user_service/user.services";
 export class loginModule implements OnInit{ 
 
 
-    constructor(private userServices: UserService){
+    constructor(){
     }
 
     ngOnInit(): void {
