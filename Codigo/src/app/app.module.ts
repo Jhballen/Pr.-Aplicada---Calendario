@@ -6,6 +6,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { HttpClientModule } from "@angular/common/http";
 import { NativeScriptFormsModule } from "nativescript-angular";
+import { enviroment } from "~/environment/env";
 
 
 @NgModule({
@@ -26,4 +27,13 @@ import { NativeScriptFormsModule } from "nativescript-angular";
         NO_ERRORS_SCHEMA
     ]
 })
-export class AppModule { }
+export class AppModule {
+    userMail: String;
+    userType: String;
+
+    constructor(){
+        this.userMail = enviroment.user.mail;
+        this.userType = enviroment.user.type;
+    }
+
+ }

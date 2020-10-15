@@ -15,7 +15,7 @@ import { User } from "../models/user.model";
 })
 export class tareasComponent implements OnInit {
 
-
+    spaceList: String;
     tasks: Array<Task>;
     task: Task;
     userTasks: Array<Task>;
@@ -23,17 +23,18 @@ export class tareasComponent implements OnInit {
         private taskService: TaskService) {
         // Use the component constructor to inject providers.
         this.userTasks = new Array<Task>();
+        this.spaceList = "";
     }
 
 
     public ngOnInit(): void {
+       this.updateList();        
+    }
+
+    updateList(){
         this.taskService.getAllTasks().subscribe(task => {
             this.tasks = task;
-
-            console.log(task);
         });
-
-        
     }
 
     onDrawerButtonTap(): void {
@@ -47,15 +48,36 @@ export class tareasComponent implements OnInit {
 
     encontrarTask() {
         this.tasks.forEach(task => {
-
-            if (enviroment.user._id == task.users[0]) {
+               
+            if (enviroment.user._id == task.users[0] && task.status == 0) {
                 this.userTasks.push(task)
+                this.spaceList += " 50"; 
             }
         });
     }
 
-    verTareas() {
-        console.log(this.userTasks);
+    changeStatus(task: Task){
+        if(task.status == 0){
+            task.status = 1;
+        }else {
+            task.status = 0;
+        }
+        this.taskService.putTask(task).subscribe(
+            (response)=>{
+            }
+        );
+        this.onNavigate();
+    }
+
+    deleteTask(task: Task){
+        this.taskService.delete(task._id);
+        this.onNavigate();
+    }
+
+    public onNavigate() {
+
+        this.router.navigate(['./home']);
+
     }
 }
 

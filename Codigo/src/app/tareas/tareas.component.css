@@ -68,10 +68,10 @@
     background-color: #ECEFF1;
     
 }
-.vikingo{
-}
+
 
 .flex{
+    
     border-top: black;
     border-top-width: 2;
     border-bottom: black;
@@ -96,6 +96,7 @@
     margin-top: 10%;
     margin-bottom: 10%;
     background:transparent;
+    padding: 5;
 }
 .cajaa2{
     margin-top: 311;
@@ -110,7 +111,8 @@
     font-family: "Varela";
     font-style: italic;
     color: blue;
-    text-transform: uppercase;   
+    text-transform: uppercase;
+    margin-top: 175;   
 }
 .boton {
     margin-top: 30;
@@ -134,4 +136,17 @@
 .boton:active {
 	position:relative;
 	top:1px;
+}
+.div{
+    position: relative;
+}
+.titleText{
+    
+    margin-left: 10;
+    margin-right: 100;
+}
+
+.imageLeft{
+    margin-left: 10;
+    margin-right: 10;
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { RouterExtensions } from "nativescript-angular/router";
 import { RadSideDrawer } from "nativescript-ui-sidedrawer";
 import * as app from "tns-core-modules/application";
 
@@ -8,16 +9,22 @@ import * as app from "tns-core-modules/application";
 })
 export class HomeComponent implements OnInit {
 
-    constructor() {
+    constructor(
+        private router: RouterExtensions
+    ) {
         // Use the component constructor to inject providers.
     }
 
     ngOnInit(): void {
-        // Init your component properties here.
+        this.onNavigate();
     }
 
     onDrawerButtonTap(): void {
         const sideDrawer = <RadSideDrawer>app.getRootView();
         sideDrawer.showDrawer();
+    }
+
+    public onNavigate() {
+        this.router.navigate(['./tareas']);
     }
 }

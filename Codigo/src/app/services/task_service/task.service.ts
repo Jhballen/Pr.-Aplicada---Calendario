@@ -23,10 +23,21 @@ export class TaskService {
         );
     }
 
-    getAllTasks (): Observable <Task []> {​​
+    delete(id: String){
+        return this.http.delete(`${enviroment.urlApi}/task/${id}`).subscribe(
+            (res)=>{
+                console.log("eliminado", id)
+            }
+        )
+    }
 
+    getAllTasks (): Observable <Task []> {​​
         return this.http.get<Task []>(`${​​enviroment.urlApi}​​/task`);
     }​​
+
+    putTask(task: Task) {
+        return this.http.put (`${enviroment.urlApi}/task/${task._id}`, task)
+    }
 
 
 }
