@@ -4,7 +4,38 @@
     height: 60;
     align-self: center;
 }
+.cajaVik{
+    margin-top: 480;
+    background:transparent;
+    border-width: 5;
+    border-color: black;
+}
+.cajaVik2{
+    margin-right: 195;
+    background-image: url("~/Recursos/user1.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    
+}
+.cajaVik3{
+    
+    background-image: url("~/Recursos/user1.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    
+}
+.chulo{
+    border-color: blue;
+    border-width: 5;
+}
+.flexi{
+    margin-left: 200;
 
+}
+.flexito{
+    margin-bottom: 110;
+    margin-left: 200;
+}
 .label{
 
      margin-left:25 ;
@@ -37,6 +68,8 @@
     background-color: #ECEFF1;
     
 }
+.vikingo{
+}
 
 .flex{
     border-top: black;
@@ -47,4 +80,58 @@
 
 .user{
     margin:6;
+    
+}
+.caja{
+    margin-bottom: 310;
+    background:transparent;
+    border-width: 5;
+    border-color: black;
+}
+.cajaBt{
+   
+    margin-bottom: 380;
+}
+.cajaa{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    background:transparent;
+}
+.cajaa2{
+    margin-top: 311;
+    margin-bottom: 180;
+    background:transparent;
+    border-width: 5;
+    border-color: black;
+}
+.Fsotaa{
+    text-align: center;
+    font-size: 25;
+    font-family: "Varela";
+    font-style: italic;
+    color: blue;
+    text-transform: uppercase;   
+}
+.boton {
+    margin-top: 30;
+	box-shadow: 0px 5px 12px 0px #3dc21b;
+	background-color:skyblue;
+	border-radius:16px;
+	border:3px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:17px;
+	font-weight:bold;
+	padding:17px 27px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.boton:hover {
+	background-color:#5cbf2a;
+}
+.boton:active {
+	position:relative;
+	top:1px;
 }
