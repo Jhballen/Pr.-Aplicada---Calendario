@@ -27,7 +27,7 @@
 </ActionBar>
 
 
-<label class="Title" text="Tareas"> </label>
+<label class="Title" text="Tareas Pendientes"> </label>
 
 <StackLayout class="UserContainer">
     <ScrollView orientation="vertical">
@@ -115,7 +115,6 @@
             </FlexboxLayout>    
         </GridLayout>
     </ScrollView>
-    
 </StackLayout>
 
 <StackLayout class="cajaa" >
@@ -136,19 +135,15 @@
                     <Image class="Image"  src="~/Recursos/inter.png" (tap)="changeStatus(task)" ></Image>
                 </StackLayout>
             </DockLayout> 
-            
-            
         </GridLayout>
     </ScrollView> 
 </StackLayout>
 
   
 <StackLayout orientation="horizontal" class="Statistics">
-
     <div>
         <Image  class="imageLeft" src="~/Recursos/VikingoFlaco.png" (tap)="deleteTask(task)" ></Image>
     </div>
-
     <StackLayout class="ButtonContainer" orientation="vertical"> 
         
         <button (tap)="encontrarTask()" class="boton" text="Encontrar tarea"></button>
@@ -156,9 +151,6 @@
         <button (tap)="crearTarea()" class="boton" text="Crear Tarea"></button>
     
       </StackLayout>
-
-      
-     
 </StackLayout>
 
  
