@@ -8,7 +8,7 @@ ITEMS "DECORATIVOS"
     font-style: italic;
     color: blue;
     text-transform: uppercase;
-    margin-top: 5%;   
+    margin-top: 3%;   
 }
 
 .corazon{
@@ -58,15 +58,10 @@ ORGANIZACION DE ITEMS NGFOR TAREAS
 }
 
 .imageContainer{
-    
-    background-color: "lightgray";
     margin-right: 0%;
 }
 
-.flex{
-    background-color: "lightgray";
-    width: 75%;
-}
+
 
 /*
 CAJAS DE USUARIOS NGFOR

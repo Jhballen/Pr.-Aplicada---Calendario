@@ -117,26 +117,20 @@
 </StackLayout>
 
 
-<StackLayout class="cajaa" >
-  
-</StackLayout>
-<StackLayout class="TaskContainer">
-  <ScrollView orientation="vertical">
-      <GridLayout rows={{spaceList}}>
-          <DockLayout *ngFor='let task of userTasks'backgroundcolor="lightgray" >
-              <FlexboxLayout dock="left" alignItems="center" class="flex" row={{userTasks.indexOf(task)}}>
-                  <Image class="user" src="~/Recursos/user1.png" ></Image>
-                  <label class="titleText" text="{{task.title}}"></label>
-              </FlexboxLayout>
-              <StackLayout dock="right" class="imageContainer" orientation="horizontal">
-                  <Image class="Image"  src="~/Recursos/delete.png" (tap)="deleteTask(task)" ></Image>
-                  <Image class="Image"  src="~/Recursos/inter.png" (tap)="changeStatus(task)" ></Image>
-              </StackLayout>
-          </DockLayout> 
-      </GridLayout>
-  </ScrollView> 
-</StackLayout>
 
+<StackLayout class="TaskContainer" >
+    <ScrollView orientation="vertical">
+        <GridLayout rows={{spaceList}}>
+            <FlexboxLayout *ngFor='let task of userTasks'  class="flex" row={{userTasks.indexOf(task)}} >
+                <Image class="user" src="~/Recursos/user1.png" ></Image>
+                <label class="titleText" text="{{task.title}}"></label>
+                <Image   src="~/Recursos/delete.png" (tap)="deleteTask(task)" ></Image>
+                <Image   src="~/Recursos/inter.png" (tap)="changeStatus(task)" ></Image>
+            </FlexboxLayout>
+            
+        </GridLayout>
+    </ScrollView> 
+</StackLayout>
 
   
 <StackLayout orientation="horizontal" class="Statistics">
