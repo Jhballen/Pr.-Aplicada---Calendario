@@ -26,10 +26,6 @@
     
 </ActionBar>
 
-<StackLayout class="cajaBt" width="340" height="300">
-    <button (tap)="crearTarea()" class="boton" text="Crear Tarea"></button>
-</StackLayout>
-
 <StackLayout class="caja" width="340" height="200" >
     
     
@@ -133,7 +129,7 @@
                 <Image class="user" src="~/Recursos/user1.png" ></Image>
                 <label class="titleText" text="{{task.title}}"></label>
                 <Image  class="imageLeft" src="~/Recursos/delete.png" (tap)="deleteTask(task)" ></Image>
-                <Image   src="~/Recursos/inter.png" (tap)="changeStatus(task)" ></Image>
+                <Image   src="~/Recursos/tick.png" (tap)="changeStatus(task)" ></Image>
             </FlexboxLayout>
             
         </GridLayout>
@@ -143,8 +139,7 @@
   
   <StackLayout class="cajaVik" width="340" height="140" orientation="horizontal"> 
     
-    <button (tap)="encontrarTask()" class="boton" text="Encontrar tarea"></button>
+    <button (tap)="encontrarTask()" class="boton" text="Tareas Terminadas"></button>
 
 
   </StackLayout>
-
