@@ -1,0 +1,35 @@
+<!--
+RadSideDrawer is a UI component part of the Progress NativeScript UI set of components.
+Learn more about the RadSideDrawer UI component and how it can be customized in this documentation article:
+https://docs.nativescript.org/angular/ui/professional-ui-components/ng-SideDrawer/getting-started
+-->
+<RadSideDrawer [drawerTransition]="sideDrawerTransition">
+    <GridLayout tkDrawerContent rows="auto, *" class="nt-drawer__content">
+        <StackLayout row="0" class="nt-drawer__header">
+            <Image class="nt-drawer__header-image fas t-36" src="font://&#xf2bd;"></Image>
+            <Label class="nt-drawer__header-brand" text="hola"></Label>
+            <Label class="nt-drawer__header-footnote" text="Bienvenido"></Label>
+        </StackLayout>
+    
+        <ScrollView row="1" class="nt-drawer__body">
+            <StackLayout>
+
+                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/tareas')" (tap)="onNavItemTap('/tareas')">
+                    <Label col="0" text="&#xf02d;" class="nt-icon fas"></Label>
+                    <Label col="1" text="Tareas" class="p-r-10"></Label>
+                </GridLayout>
+        
+                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/crear-tarea')" (tap)="onNavItemTap('/crear-tarea')">
+                    <Label col="0" text="&#xf005;" class="nt-icon fas"></Label>
+                    <Label col="1" text="Crear Tarea" class="p-r-10"></Label>
+                </GridLayout>
+
+                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/task-done')" (tap)="onNavItemTap('/task-done')">
+                    <Label col="0" text="&#xf005;" class="nt-icon fas"></Label>
+                    <Label col="1" text="Tareas Terminadas" class="p-r-10"></Label>
+                </GridLayout>
+            </StackLayout>
+        </ScrollView>
+    </GridLayout>
+    <page-router-outlet tkMainContent></page-router-outlet>
+</RadSideDrawer>

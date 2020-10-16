@@ -1,0 +1,28 @@
+<StackLayout class="form" >
+
+    <StackLayout>
+        <Image class="logotipo" src="~/Recursos/logo.png"></Image>
+    </StackLayout>
+    
+    <label class="header" text="TimePoint"></label>
+
+    <StackLayout class="entradas" >
+        <TextField class="entradaUser"hint="Nombre Completo"[text]='name'secure="false" ></TextField>
+    </StackLayout>
+
+    <StackLayout class="entradas" >
+        <TextField [(ngModel)]="newUser.mail" class="entradaUser"hint="Correo" secure="false"></TextField>
+    </StackLayout>
+
+    <StackLayout class="entradas" >
+        <TextField [(ngModel)]="newUser.password" class="entradaUser"hint="Contraseña" secure="true" ></TextField>
+    </StackLayout>
+    <StackLayout>
+        <button class="botonlog" (tap)="createUser()" text="Registrar"></button>
+    </StackLayout>
+
+    
+    <label class="registrar"(tap)="onBack()" text="Inicia Sesion!"></label>
+</StackLayout>
+  
+

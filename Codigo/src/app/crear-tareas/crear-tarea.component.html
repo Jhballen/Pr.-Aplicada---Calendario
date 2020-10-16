@@ -1,0 +1,52 @@
+<ActionBar>
+    <!-- 
+    Use the NavigationButton as a side-drawer button in Android
+    because ActionItems are shown on the right side of the ActionBar
+    -->
+    <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+    <!-- 
+    Use the ActionItem for IOS with position set to left. Using the
+    NavigationButton as a side-drawer button in iOS is not possible,
+    because its function is to always navigate back in the application.
+    -->
+    
+    <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
+        ios.position="left">
+    </ActionItem>
+    
+    
+    <FlexboxLayout alignItems="center"  >
+        <Image class="corazon" src="~/Recursos/corazon.png" ></Image>
+        <Image class="corazon" src="~/Recursos/corazon.png"></Image>
+        <Image class="corazon" src="~/Recursos/corazon.png"></Image>
+        <GridLayout columns="3*, 1*" class="progressbar">
+            <StackLayout col="0" class="barra2"></StackLayout>
+          </GridLayout>
+    </FlexboxLayout>
+    
+</ActionBar>
+
+<StackLayout class="form" >
+    
+    <label class="header" text="Nueva Tarea"></label>
+
+    <StackLayout class="tarea" >
+        <TextField [(ngModel)]="newTarea.title" class="entradaUser" hint="Titulo"></TextField>
+    </StackLayout>
+
+    <StackLayout class="tarea" >
+        <TextField [(ngModel)]="newTarea.description" class="entradaUser" hint="Descripción"></TextField>
+    </StackLayout>
+    
+    <StackLayout class="tarea" >
+       <label class ="label1" text="Fecha Limite:"></label>
+       <br>
+        <DatePicker [year]="currentYear" [month]="currentMonth" [day]="currentDay"
+    minDate="2020-01-01" maxDate="2100-12-31"></DatePicker>
+    </StackLayout>
+    
+    <StackLayout>
+        <button class="botonCrear" (tap)="createTask()" text="Crear"></button>
+    </StackLayout>
+</StackLayout>
+
