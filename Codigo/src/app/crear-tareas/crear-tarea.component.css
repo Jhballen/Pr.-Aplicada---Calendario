@@ -19,15 +19,17 @@
     background-image: url("~/Recursos/fondoTarea.png");
     background-repeat: no-repeat;
     background-size:cover;
+    background-size: 100% 100%;
 }
 
 .tarea {
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-bottom: 30px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 5%;
 }
 
 .botonCrear{
+    width: 80%;
     height: 50;
     font-size: 20;
     font-weight: 600;
