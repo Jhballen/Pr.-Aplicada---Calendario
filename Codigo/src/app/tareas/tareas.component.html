@@ -26,16 +26,13 @@
     
 </ActionBar>
 
-<StackLayout class="cajaBt" width="340" height="300">
-    <button (tap)="crearTarea()" class="boton" text="Crear Tarea"></button>
-</StackLayout>
 
-<StackLayout class="caja" width="340" height="200" >
-    
-    
+<label class="Title" text="Tareas"> </label>
+
+<StackLayout class="UserContainer">
     <ScrollView orientation="vertical">
         <GridLayout rows="50 50 50 50 50 50 50 50 50">
-            <FlexboxLayout alignItems="center" class="flex" row="0" backgroundcolor="lightgray" >
+            <FlexboxLayout alignItems="center" class="UserItem" row="0" backgroundcolor="lightgray" >
                 <Image class="user" src="~/Recursos/user1.png" ></Image>
                 <Image class="corazon" src="~/Recursos/corazon.png" ></Image>
                 <Image class="corazon" src="~/Recursos/corazon.png"></Image>
@@ -44,7 +41,7 @@
                     <StackLayout col="0" class="barra"></StackLayout>
                   </GridLayout>
             </FlexboxLayout>
-            <FlexboxLayout alignItems="center" class="flex" row="1"  backgroundcolor="lightgray">
+            <FlexboxLayout alignItems="center" class="UserItem" row="1"  backgroundcolor="lightgray">
                 <Image class="user" src="~/Recursos/user2.jpg" ></Image>
                 <Image class="corazon" src="~/Recursos/corazon.png" ></Image>
                 <Image class="corazon" src="~/Recursos/corazon.png"></Image>
@@ -53,7 +50,7 @@
                     <StackLayout col="0" class="barra"></StackLayout>
                   </GridLayout>
             </FlexboxLayout>
-            <FlexboxLayout alignItems="center" class="flex" row="2" backgroundcolor="lightgray">
+            <FlexboxLayout alignItems="center" class="UserItem" row="2" backgroundcolor="lightgray">
                 <Image class="user" src="~/Recursos/user3.png" ></Image>
                 <Image class="corazon" src="~/Recursos/corazon.png" ></Image>
                 <Image class="corazon" src="~/Recursos/corazon.png"></Image>
@@ -62,7 +59,7 @@
                     <StackLayout col="0" class="barra"></StackLayout>
                   </GridLayout>
             </FlexboxLayout>
-            <FlexboxLayout alignItems="center" class="flex" row="3" backgroundcolor="lightgray" >
+            <FlexboxLayout alignItems="center" class="UserItem" row="3" backgroundcolor="lightgray" >
                 <Image class="user" src="~/Recursos/user1.png" ></Image>
                 <Image class="corazon" src="~/Recursos/corazon.png" ></Image>
                 <Image class="corazon" src="~/Recursos/corazon.png"></Image>
@@ -71,7 +68,7 @@
                     <StackLayout col="0" class="barra"></StackLayout>
                   </GridLayout>
             </FlexboxLayout>
-            <FlexboxLayout alignItems="center" class="flex" row="4"  backgroundcolor="lightgray">
+            <FlexboxLayout alignItems="center" class="UserItem" row="4"  backgroundcolor="lightgray">
                 <Image class="user" src="~/Recursos/user2.jpg" ></Image>
                 <Image class="corazon" src="~/Recursos/corazon.png" ></Image>
                 <Image class="corazon" src="~/Recursos/corazon.png"></Image>
@@ -80,7 +77,7 @@
                     <StackLayout col="0" class="barra"></StackLayout>
                   </GridLayout>
             </FlexboxLayout>
-            <FlexboxLayout alignItems="center" class="flex" row="5" backgroundcolor="lightgray">
+            <FlexboxLayout alignItems="center" class="UserItem" row="5" backgroundcolor="lightgray">
                 <Image class="user" src="~/Recursos/user3.png" ></Image>
                 <Image class="corazon" src="~/Recursos/corazon.png" ></Image>
                 <Image class="corazon" src="~/Recursos/corazon.png"></Image>
@@ -89,7 +86,7 @@
                     <StackLayout col="0" class="barra"></StackLayout>
                   </GridLayout>
             </FlexboxLayout>
-            <FlexboxLayout alignItems="center" class="flex" row="6" backgroundcolor="lightgray" >
+            <FlexboxLayout alignItems="center" class="UserItem" row="6" backgroundcolor="lightgray" >
                 <Image class="user" src="~/Recursos/user1.png" ></Image>
                 <Image class="corazon" src="~/Recursos/corazon.png" ></Image>
                 <Image class="corazon" src="~/Recursos/corazon.png"></Image>
@@ -98,7 +95,7 @@
                     <StackLayout col="0" class="barra"></StackLayout>
                   </GridLayout>
             </FlexboxLayout>
-            <FlexboxLayout alignItems="center" class="flex" row="7" backgroundcolor="lightgray" >
+            <FlexboxLayout alignItems="center" class="UserItem" row="7" backgroundcolor="lightgray" >
                 <Image class="user" src="~/Recursos/user2.jpg" ></Image>
                 <Image class="corazon" src="~/Recursos/corazon.png" ></Image>
                 <Image class="corazon" src="~/Recursos/corazon.png"></Image>
@@ -107,7 +104,7 @@
                     <StackLayout col="0" class="barra"></StackLayout>
                   </GridLayout>
             </FlexboxLayout>
-            <FlexboxLayout alignItems="center" class="flex" row="8" backgroundcolor="lightgray">
+            <FlexboxLayout alignItems="center" class="UserItem" row="8" backgroundcolor="lightgray">
                 <Image class="user" src="~/Recursos/user3.png" ></Image>
                 <Image class="corazon" src="~/Recursos/corazon.png" ></Image>
                 <Image class="corazon" src="~/Recursos/corazon.png"></Image>
@@ -119,32 +116,50 @@
         </GridLayout>
     </ScrollView>
     
-  </StackLayout>
+</StackLayout>
 
-  <StackLayout class="cajaa" >
+<StackLayout class="cajaa" >
 
-    <label class="Fsotaa" text="Tareas"> </label>
+    
   
-  </StackLayout>
-  <StackLayout class="cajaa2" width="340" height="200">
+</StackLayout>
+  <StackLayout class="TaskContainer">
     <ScrollView orientation="vertical">
         <GridLayout rows={{spaceList}}>
-            <FlexboxLayout *ngFor='let task of userTasks' alignItems="center" class="flex" row={{userTasks.indexOf(task)}} backgroundcolor="lightgray" >
-                <Image class="user" src="~/Recursos/user1.png" ></Image>
-                <label class="titleText" text="{{task.title}}"></label>
-                <Image  class="imageLeft" src="~/Recursos/delete.png" (tap)="deleteTask(task)" ></Image>
-                <Image   src="~/Recursos/inter.png" (tap)="changeStatus(task)" ></Image>
-            </FlexboxLayout>
+            <DockLayout *ngFor='let task of userTasks'backgroundcolor="lightgray" >
+                <FlexboxLayout dock="left" alignItems="center" class="flex" row={{userTasks.indexOf(task)}}>
+                    <Image class="user" src="~/Recursos/user1.png" ></Image>
+                    <label class="titleText" text="{{task.title}}"></label>
+                </FlexboxLayout>
+                <StackLayout dock="right" class="imageContainer" orientation="horizontal">
+                    <Image class="Image"  src="~/Recursos/delete.png" (tap)="deleteTask(task)" ></Image>
+                    <Image class="Image"  src="~/Recursos/inter.png" (tap)="changeStatus(task)" ></Image>
+                </StackLayout>
+            </DockLayout> 
+            
             
         </GridLayout>
     </ScrollView> 
-  </StackLayout>
+</StackLayout>
 
   
-  <StackLayout class="cajaVik" width="340" height="140" orientation="horizontal"> 
+<StackLayout orientation="horizontal" class="Statistics">
+
+    <div>
+        <Image  class="imageLeft" src="~/Recursos/VikingoFlaco.png" (tap)="deleteTask(task)" ></Image>
+    </div>
+
+    <StackLayout class="ButtonContainer" orientation="vertical"> 
+        
+        <button (tap)="encontrarTask()" class="boton" text="Encontrar tarea"></button>
+        <button (tap)="taskDone()" class="boton" text="Tareas Completas"></button>
+        <button (tap)="crearTarea()" class="boton" text="Crear Tarea"></button>
     
-    <button (tap)="encontrarTask()" class="boton" text="Encontrar tarea"></button>
+      </StackLayout>
 
+      
+     
+</StackLayout>
 
-  </StackLayout>
+ 
 

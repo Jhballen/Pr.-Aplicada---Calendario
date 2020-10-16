@@ -46,6 +46,10 @@ export class tareasComponent implements OnInit {
         this.router.navigate(['crear-tarea']);
     }
 
+    taskDone(){
+        this.router.navigate(['task-done']);
+    }
+
     encontrarTask() {
         this.tasks.forEach(task => {
                
