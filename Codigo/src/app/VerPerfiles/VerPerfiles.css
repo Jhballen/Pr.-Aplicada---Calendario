@@ -1,0 +1,32 @@
+.imgHeader{
+    margin-top: 15;
+    height: 50;
+    width: 70;
+}
+
+.labelHeader{
+   
+    margin-top: 25;
+    font-size: 15;
+    font-style: italic;
+    color: white;
+    font-weight: bold;
+    
+}
+
+.cajaPerfiles{
+    margin-top: 80;
+    width: 340;
+    height: 340;
+    background-color: black;
+    border-color: white;
+    border-width: 5;
+}
+
+.flex{
+    
+    border-top: black;
+    border-top-width: 2;
+    border-bottom: black;
+    border-bottom-width: 2;
+}

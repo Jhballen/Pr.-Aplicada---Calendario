@@ -1,0 +1,36 @@
+<StackLayout backgroundColor="black">
+    <GridLayout columns="100,100,100,100" rows="auto">
+        <Image class="imgHeader" src="~/Recursos/logo.png" row="1" col="1"></Image>
+        <label class="labelHeader" horizontalAlignment="left" row="1" col="2" text="TIMEPOINT"></label>
+        <Image class="imgHeader" src="~/Recursos/mas.png" row="1" col="3" horizontalAlignment="left" (tap)="addPerfil()"></Image>
+    </GridLayout>
+
+    <StackLayout class="cajaPerfiles">
+        <ScrollView orientation="vertical">
+            <GridLayout rows="50 50 "> 
+                <FlexboxLayout alignItems="center" class="flex" row="0" backgroundcolor="lightgray" (tap)="ingreso()">
+                    <Image class="user" src="~/Recursos/user1.png"></Image>
+                    <Image class="corazon" src="~/Recursos/corazon.png"></Image>
+                    <Image class="corazon" src="~/Recursos/corazon.png"></Image>
+                    <Image class="corazon" src="~/Recursos/corazon.png"></Image>
+                    <GridLayout columns="1*, 3*" class="progressbar2">
+                        <StackLayout col="0" class="barra"></StackLayout>
+                    </GridLayout>
+                </FlexboxLayout>
+                <FlexboxLayout alignItems="center" class="flex" row="1" backgroundcolor="lightgray">
+                    <Image class="user" src="~/Recursos/user1.png"></Image>
+                    <Image class="corazon" src="~/Recursos/corazon.png"></Image>
+                    <Image class="corazon" src="~/Recursos/corazon.png"></Image>
+                    <Image class="corazon" src="~/Recursos/corazon.png"></Image>
+                    <GridLayout columns="1*, 3*" class="progressbar2">
+                        <StackLayout col="0" class="barra"></StackLayout>
+                    </GridLayout>
+                </FlexboxLayout>      
+            </GridLayout>
+
+        </ScrollView>
+
+    </StackLayout>
+
+
+</StackLayout>
