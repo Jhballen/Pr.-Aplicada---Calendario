@@ -48,8 +48,8 @@ export class tareasComponent implements OnInit {
 
     encontrarTask() {
         this.tasks.forEach(task => {
-               
-            if (enviroment.user._id == task.users[0] && task.status == 0) {
+
+            if (enviroment.profile._id == task.profile[0] && task.status == 0) {
                 this.userTasks.push(task)
                 this.spaceList += " 50"; 
             }
