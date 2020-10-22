@@ -37,7 +37,7 @@ export class crearTareaComponent implements OnInit{
 
     createTask(){
         this.newTarea.status = 0;
-        this.newTarea.users = enviroment.user;
+        this.newTarea.profiles = enviroment.profile;
         console.log(this.newTarea)
         this.taskService.createTask(this.newTarea);
         this.onNavigate();
