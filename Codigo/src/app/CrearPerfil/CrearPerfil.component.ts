@@ -1,6 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { RadSideDrawer } from "nativescript-ui-sidedrawer";
 import * as app from "tns-core-modules/application";
+import { Profile } from "../models/profile.model";
+import { ProfileService } from "../services/profile_service/profile.service";
 
 @Component({
     selector: "CrearPerfil",
@@ -9,8 +11,25 @@ import * as app from "tns-core-modules/application";
 })
 export class CrearPerfilComponent implements OnInit {
 
-    constructor() {
-        // Use the component constructor to inject providers.
+    perfil: Profile;
+
+    constructor(private profileService: ProfileService) {
+        this.perfil = new Profile();
+    }
+
+
+    createProfile(){
+        
+        console.log(this.perfil)
+        this.perfil.profilePicture = 0;
+        if(this.perfil.name != null){
+            this.profileService.createProfile(this.perfil).subscribe(
+                (res)=>{
+                    console.log(res);
+                }
+            )
+        }
+
     }
 
     ngOnInit(): void {

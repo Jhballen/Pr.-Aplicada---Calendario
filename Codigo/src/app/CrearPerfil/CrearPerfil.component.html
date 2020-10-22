@@ -23,10 +23,10 @@
 <label class="header" text="Nuevo Perfil"></label>
 
 <StackLayout class="tarea" style="padding-bottom: 100;">
-    <TextField  class="entradaUser" hint="Nombre de Usuario"></TextField>
+    <TextField [(ngModel)]="perfil.name" class="entradaUser" hint="Nombre de Usuario"></TextField>
 </StackLayout>
 
 <StackLayout>
-    <button class="botonCrear"  text="Crear Nuevo Perfil"></button>
+    <button class="botonCrear" (tap)="createProfile()" text="Crear Nuevo Perfil"></button>
 </StackLayout>
 </StackLayout>

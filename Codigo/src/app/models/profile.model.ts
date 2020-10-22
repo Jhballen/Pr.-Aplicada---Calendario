@@ -3,6 +3,6 @@ import { Task } from "../models/task.model";
 export class Profile {
     _id: String;
     name: String;
-    imageProfile: String;
+    profilePicture: number;
     task: [Task];
 };
