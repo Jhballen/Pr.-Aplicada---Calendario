@@ -45,7 +45,6 @@ export class registroComponent implements OnInit{
 
     createUser(){
         //DATOS DE INICIO PREDETERMINADOS
-        this.newUser.profilePicture = 0;
         this.newUser.type  = "usuario";
 
         console.log(this.newUser);
