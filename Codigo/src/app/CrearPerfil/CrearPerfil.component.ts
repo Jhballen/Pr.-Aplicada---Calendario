@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { RadSideDrawer } from "nativescript-ui-sidedrawer";
 import * as app from "tns-core-modules/application";
+import { enviroment } from "~/environment/env";
 import { Profile } from "../models/profile.model";
 import { ProfileService } from "../services/profile_service/profile.service";
 
@@ -22,6 +23,8 @@ export class CrearPerfilComponent implements OnInit {
         
         console.log(this.perfil)
         this.perfil.profilePicture = 0;
+        this.perfil.userId = enviroment.user._id;
+        console.log(this.perfil.userId)
         if(this.perfil.name != null){
             this.profileService.createProfile(this.perfil).subscribe(
                 (res)=>{

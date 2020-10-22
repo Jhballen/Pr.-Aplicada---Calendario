@@ -5,4 +5,5 @@ export class Profile {
     name: String;
     profilePicture: number;
     task: [Task];
+    userId: string;
 };

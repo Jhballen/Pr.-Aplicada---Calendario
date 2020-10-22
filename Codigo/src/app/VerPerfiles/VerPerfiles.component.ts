@@ -15,7 +15,7 @@ import { ProfileService } from "../services/profile_service/profile.service";
 })
 export class VerPerfilesComponent implements OnInit {
 
-    perfiles: Observable<Profile[]>;
+    perfiles: Array<Profile>;
     spaceList: String
 
     constructor(
@@ -24,6 +24,7 @@ export class VerPerfilesComponent implements OnInit {
         private profileService: ProfileService) {
         this._page.actionBarHidden = true;
         this.spaceList = "";
+        this.perfiles = new Array<Profile>();
     }
 
     ngOnInit(): void {
@@ -33,10 +34,17 @@ export class VerPerfilesComponent implements OnInit {
     }
 
     async loadDataBase(){
-        this.perfiles = this.profileService.getProfile(enviroment.user._id);
-        this.perfiles.forEach(task => {
-            this.spaceList += " 50"; 
-        });
+        this.profileService.getProfile(enviroment.user._id).subscribe(
+            (res)=>{
+                this.perfiles = res;
+                print();
+            }
+        )
+        
+    }
+
+    print(){
+        console.log(this.perfiles);
     }
 
     onDrawerButtonTap(): void {
