@@ -31,7 +31,7 @@ export class loginComponent implements OnInit {
 
     public onNavigate() {
 
-        this.router.navigate(['./home']);
+        this.router.navigate(['./VerPerfiles']);
 
     }
     public onNavigate2() {

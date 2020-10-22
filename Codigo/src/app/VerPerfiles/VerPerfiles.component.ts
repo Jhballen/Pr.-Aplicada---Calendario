@@ -37,22 +37,19 @@ export class VerPerfilesComponent implements OnInit {
         this.profileService.getProfile(enviroment.user._id).subscribe(
             (res)=>{
                 this.perfiles = res;
-                print();
+                enviroment.profile = res[0];
             }
         )
         
     }
 
-    print(){
-        console.log(this.perfiles);
-    }
 
     onDrawerButtonTap(): void {
     
     }
 
     ingreso(profile: Profile){
-        enviroment.profile = profile;
+        console.log(enviroment.profile)
         this.router.navigate(['home']);
     }
     addPerfil(){

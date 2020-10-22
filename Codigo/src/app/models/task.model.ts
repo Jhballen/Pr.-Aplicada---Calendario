@@ -5,5 +5,5 @@ export class Task {
     title: String;
     description: String;
     status: Number;
-    profile: [Profile];
+    profile: [String];
 };

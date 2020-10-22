@@ -47,14 +47,12 @@ export class taskDoneComponent implements OnInit {
     }
 
     encontrarTask() {
-        let i =0;
         this.tasks.forEach(task => {
-            
-            if (enviroment.profile[0]._id == task.profile[0] && task.status == 1) {
-                this.userTasks.push(task)
+
+            if(task.profile[0]==enviroment.profile._id && task.status == 1){
+                this.userTasks.push(task);
                 this.spaceList += " 50"; 
             }
-            i+=1;
         });
     }
 
