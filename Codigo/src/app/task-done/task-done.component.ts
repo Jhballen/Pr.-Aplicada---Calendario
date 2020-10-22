@@ -42,10 +42,6 @@ export class taskDoneComponent implements OnInit {
         sideDrawer.showDrawer();
     }
 
-    taskPending (){
-        this.router.navigate(['tareas']);
-    }
-
     crearTarea() {
         this.router.navigate(['crear-tarea']);
     }

@@ -28,6 +28,15 @@ https://docs.nativescript.org/angular/ui/professional-ui-components/ng-SideDrawe
                     <Label col="0" text="&#xf005;" class="nt-icon fas"></Label>
                     <Label col="1" text="Tareas Terminadas" class="p-r-10"></Label>
                 </GridLayout>
+
+                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/VerPerfiles')" (tap)="onNavItemTap('/VerPerfiles')">
+                    <Label col="0" text="&#xf005;" class="nt-icon fas"></Label>
+                    <Label col="1" text="Ver Perfiles" class="p-r-10"></Label>
+                </GridLayout>
+                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/CrearPerfil')" (tap)="onNavItemTap('/CrearPerfil')">
+                    <Label col="0" text="&#xf005;" class="nt-icon fas"></Label>
+                    <Label col="1" text="Crear Perfil" class="p-r-10"></Label>
+                </GridLayout>
             </StackLayout>
         </ScrollView>
     </GridLayout>

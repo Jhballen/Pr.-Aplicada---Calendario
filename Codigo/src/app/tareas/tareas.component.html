@@ -9,140 +9,141 @@
     NavigationButton as a side-drawer button in iOS is not possible,
     because its function is to always navigate back in the application.
     -->
-    
-    <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
-        ios.position="left">
+
+    <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()" ios.position="left">
     </ActionItem>
-    
-    
-    <FlexboxLayout alignItems="center"  >
-        <Image class="corazon" src="~/Recursos/corazon.png" ></Image>
+
+
+    <FlexboxLayout alignItems="center">
+        <Image class="corazon" src="~/Recursos/corazon.png"></Image>
         <Image class="corazon" src="~/Recursos/corazon.png"></Image>
         <Image class="corazon" src="~/Recursos/corazon.png"></Image>
         <GridLayout columns="3*, 1*" class="progressbar">
             <StackLayout col="0" class="barra2"></StackLayout>
-          </GridLayout>
+        </GridLayout>
     </FlexboxLayout>
-    
+
 </ActionBar>
 
+<StackLayout class="cajaBt" width="340" height="300">
+    <button (tap)="crearTarea()" class="boton" text="Crear Tarea"></button>
+</StackLayout>
 
-<label class="Title" text="Tareas Pendientes"> </label>
+<StackLayout class="caja" width="340" height="200">
 
-<StackLayout class="UserContainer" >
+
     <ScrollView orientation="vertical">
         <GridLayout rows="50 50 50 50 50 50 50 50 50">
-            <FlexboxLayout alignItems="center" class="UserItem" row="0" backgroundcolor="lightgray" >
-                <Image class="user" src="~/Recursos/user1.png" ></Image>
-                <Image class="corazon" src="~/Recursos/corazon.png" ></Image>
+            <FlexboxLayout alignItems="center" class="flex" row="0" backgroundcolor="lightgray">
+                <Image class="user" src="~/Recursos/user1.png"></Image>
+                <Image class="corazon" src="~/Recursos/corazon.png"></Image>
                 <Image class="corazon" src="~/Recursos/corazon.png"></Image>
                 <Image class="corazon" src="~/Recursos/corazon.png"></Image>
                 <GridLayout columns="1*, 3*" class="progressbar2">
                     <StackLayout col="0" class="barra"></StackLayout>
-                  </GridLayout>
+                </GridLayout>
             </FlexboxLayout>
-            <FlexboxLayout alignItems="center" class="UserItem" row="1"  backgroundcolor="lightgray">
-                <Image class="user" src="~/Recursos/user2.jpg" ></Image>
-                <Image class="corazon" src="~/Recursos/corazon.png" ></Image>
+            <FlexboxLayout alignItems="center" class="flex" row="1" backgroundcolor="lightgray">
+                <Image class="user" src="~/Recursos/user2.jpg"></Image>
+                <Image class="corazon" src="~/Recursos/corazon.png"></Image>
                 <Image class="corazon" src="~/Recursos/corazon.png"></Image>
                 <Image class="corazon" src="~/Recursos/corazon.png"></Image>
                 <GridLayout columns="4*, 1*" class="progressbar2">
                     <StackLayout col="0" class="barra"></StackLayout>
-                  </GridLayout>
+                </GridLayout>
             </FlexboxLayout>
-            <FlexboxLayout alignItems="center" class="UserItem" row="2" backgroundcolor="lightgray">
-                <Image class="user" src="~/Recursos/user3.png" ></Image>
-                <Image class="corazon" src="~/Recursos/corazon.png" ></Image>
+            <FlexboxLayout alignItems="center" class="flex" row="2" backgroundcolor="lightgray">
+                <Image class="user" src="~/Recursos/user3.png"></Image>
                 <Image class="corazon" src="~/Recursos/corazon.png"></Image>
-                <Image class="corazon" src="~/Recursos/corazon.png"></Image>
-                <GridLayout columns="2*, 2*" class="progressbar2">
-                    <StackLayout col="0" class="barra"></StackLayout>
-                  </GridLayout>
-            </FlexboxLayout>
-            <FlexboxLayout alignItems="center" class="UserItem" row="3" backgroundcolor="lightgray" >
-                <Image class="user" src="~/Recursos/user1.png" ></Image>
-                <Image class="corazon" src="~/Recursos/corazon.png" ></Image>
-                <Image class="corazon" src="~/Recursos/corazon.png"></Image>
-                <Image class="corazon" src="~/Recursos/corazon.png"></Image>
-                <GridLayout columns="1*, 3*" class="progressbar2">
-                    <StackLayout col="0" class="barra"></StackLayout>
-                  </GridLayout>
-            </FlexboxLayout>
-            <FlexboxLayout alignItems="center" class="UserItem" row="4"  backgroundcolor="lightgray">
-                <Image class="user" src="~/Recursos/user2.jpg" ></Image>
-                <Image class="corazon" src="~/Recursos/corazon.png" ></Image>
-                <Image class="corazon" src="~/Recursos/corazon.png"></Image>
-                <Image class="corazon" src="~/Recursos/corazon.png"></Image>
-                <GridLayout columns="1*, 3*" class="progressbar2">
-                    <StackLayout col="0" class="barra"></StackLayout>
-                  </GridLayout>
-            </FlexboxLayout>
-            <FlexboxLayout alignItems="center" class="UserItem" row="5" backgroundcolor="lightgray">
-                <Image class="user" src="~/Recursos/user3.png" ></Image>
-                <Image class="corazon" src="~/Recursos/corazon.png" ></Image>
-                <Image class="corazon" src="~/Recursos/corazon.png"></Image>
-                <Image class="corazon" src="~/Recursos/corazon.png"></Image>
-                <GridLayout columns="1*, 3*" class="progressbar2">
-                    <StackLayout col="0" class="barra"></StackLayout>
-                  </GridLayout>
-            </FlexboxLayout>
-            <FlexboxLayout alignItems="center" class="UserItem" row="6" backgroundcolor="lightgray" >
-                <Image class="user" src="~/Recursos/user1.png" ></Image>
-                <Image class="corazon" src="~/Recursos/corazon.png" ></Image>
-                <Image class="corazon" src="~/Recursos/corazon.png"></Image>
-                <Image class="corazon" src="~/Recursos/corazon.png"></Image>
-                <GridLayout columns="3*, 1*" class="progressbar2">
-                    <StackLayout col="0" class="barra"></StackLayout>
-                  </GridLayout>
-            </FlexboxLayout>
-            <FlexboxLayout alignItems="center" class="UserItem" row="7" backgroundcolor="lightgray" >
-                <Image class="user" src="~/Recursos/user2.jpg" ></Image>
-                <Image class="corazon" src="~/Recursos/corazon.png" ></Image>
-                <Image class="corazon" src="~/Recursos/corazon.png"></Image>
-                <Image class="corazon" src="~/Recursos/corazon.png"></Image>
-                <GridLayout columns="1*, 3*" class="progressbar2">
-                    <StackLayout col="0" class="barra"></StackLayout>
-                  </GridLayout>
-            </FlexboxLayout>
-            <FlexboxLayout alignItems="center" class="UserItem" row="8" backgroundcolor="lightgray">
-                <Image class="user" src="~/Recursos/user3.png" ></Image>
-                <Image class="corazon" src="~/Recursos/corazon.png" ></Image>
                 <Image class="corazon" src="~/Recursos/corazon.png"></Image>
                 <Image class="corazon" src="~/Recursos/corazon.png"></Image>
                 <GridLayout columns="2*, 2*" class="progressbar2">
                     <StackLayout col="0" class="barra"></StackLayout>
                 </GridLayout>
-            </FlexboxLayout>    
+            </FlexboxLayout>
+            <FlexboxLayout alignItems="center" class="flex" row="3" backgroundcolor="lightgray">
+                <Image class="user" src="~/Recursos/user1.png"></Image>
+                <Image class="corazon" src="~/Recursos/corazon.png"></Image>
+                <Image class="corazon" src="~/Recursos/corazon.png"></Image>
+                <Image class="corazon" src="~/Recursos/corazon.png"></Image>
+                <GridLayout columns="1*, 3*" class="progressbar2">
+                    <StackLayout col="0" class="barra"></StackLayout>
+                </GridLayout>
+            </FlexboxLayout>
+            <FlexboxLayout alignItems="center" class="flex" row="4" backgroundcolor="lightgray">
+                <Image class="user" src="~/Recursos/user2.jpg"></Image>
+                <Image class="corazon" src="~/Recursos/corazon.png"></Image>
+                <Image class="corazon" src="~/Recursos/corazon.png"></Image>
+                <Image class="corazon" src="~/Recursos/corazon.png"></Image>
+                <GridLayout columns="1*, 3*" class="progressbar2">
+                    <StackLayout col="0" class="barra"></StackLayout>
+                </GridLayout>
+            </FlexboxLayout>
+            <FlexboxLayout alignItems="center" class="flex" row="5" backgroundcolor="lightgray">
+                <Image class="user" src="~/Recursos/user3.png"></Image>
+                <Image class="corazon" src="~/Recursos/corazon.png"></Image>
+                <Image class="corazon" src="~/Recursos/corazon.png"></Image>
+                <Image class="corazon" src="~/Recursos/corazon.png"></Image>
+                <GridLayout columns="1*, 3*" class="progressbar2">
+                    <StackLayout col="0" class="barra"></StackLayout>
+                </GridLayout>
+            </FlexboxLayout>
+            <FlexboxLayout alignItems="center" class="flex" row="6" backgroundcolor="lightgray">
+                <Image class="user" src="~/Recursos/user1.png"></Image>
+                <Image class="corazon" src="~/Recursos/corazon.png"></Image>
+                <Image class="corazon" src="~/Recursos/corazon.png"></Image>
+                <Image class="corazon" src="~/Recursos/corazon.png"></Image>
+                <GridLayout columns="3*, 1*" class="progressbar2">
+                    <StackLayout col="0" class="barra"></StackLayout>
+                </GridLayout>
+            </FlexboxLayout>
+            <FlexboxLayout alignItems="center" class="flex" row="7" backgroundcolor="lightgray">
+                <Image class="user" src="~/Recursos/user2.jpg"></Image>
+                <Image class="corazon" src="~/Recursos/corazon.png"></Image>
+                <Image class="corazon" src="~/Recursos/corazon.png"></Image>
+                <Image class="corazon" src="~/Recursos/corazon.png"></Image>
+                <GridLayout columns="1*, 3*" class="progressbar2">
+                    <StackLayout col="0" class="barra"></StackLayout>
+                </GridLayout>
+            </FlexboxLayout>
+            <FlexboxLayout alignItems="center" class="flex" row="8" backgroundcolor="lightgray">
+                <Image class="user" src="~/Recursos/user3.png"></Image>
+                <Image class="corazon" src="~/Recursos/corazon.png"></Image>
+                <Image class="corazon" src="~/Recursos/corazon.png"></Image>
+                <Image class="corazon" src="~/Recursos/corazon.png"></Image>
+                <GridLayout columns="2*, 2*" class="progressbar2">
+                    <StackLayout col="0" class="barra"></StackLayout>
+                </GridLayout>
+            </FlexboxLayout>
+        </GridLayout>
+    </ScrollView>
+
+</StackLayout>
+
+<StackLayout class="cajaa">
+
+    <label class="Fsotaa" text="Tareas"> </label>
+
+</StackLayout>
+<StackLayout class="cajaa2" width="340" height="200">
+    <ScrollView orientation="vertical">
+        <GridLayout rows={{spaceList}}>
+            <FlexboxLayout *ngFor='let task of userTasks' alignItems="center" class="flex"
+                row={{userTasks.indexOf(task)}} backgroundcolor="lightgray">
+                <Image class="user" src="~/Recursos/user1.png"></Image>
+                <label class="titleText" text="{{task.title}}"></label>
+                <Image class="imageLeft" src="~/Recursos/delete.png" (tap)="deleteTask(task)"></Image>
+                <Image src="~/Recursos/inter.png" (tap)="changeStatus(task)"></Image>
+            </FlexboxLayout>
+
         </GridLayout>
     </ScrollView>
 </StackLayout>
 
 
-<StackLayout class="TaskContainer" >
-    <ScrollView orientation="vertical">
-        <GridLayout rows={{spaceList}}>
-            <FlexboxLayout *ngFor='let task of userTasks' class="flex" row={{userTasks.indexOf(task)}} >
-                <Image class="user" src="~/Recursos/user1.png" ></Image>
-                <label class="titleText" text="{{task.title}}"></label>
-                <Image   src="~/Recursos/delete.png" (tap)="deleteTask(task)" ></Image>
-                <Image   src="~/Recursos/inter.png" (tap)="changeStatus(task)" ></Image>
-            </FlexboxLayout>
-        </GridLayout>
-    </ScrollView> 
-</StackLayout>
-  
-<StackLayout orientation="horizontal" class="Statistics">
-    <div>
-        <Image  class="imageLeft" src="~/Recursos/VikingoFlaco.png" (tap)="deleteTask(task)" ></Image>
-    </div>
-    <StackLayout class="ButtonContainer" orientation="vertical"> 
-        
-        <button (tap)="encontrarTask()" class="boton" text="Encontrar tarea"></button>
-        <button (tap)="taskDone()" class="boton" text="Tareas Completas"></button>
-        <button (tap)="crearTarea()" class="boton" text="Crear Tarea"></button>
-    
-      </StackLayout>
-</StackLayout>
+<StackLayout class="cajaVik" width="340" height="140" orientation="horizontal">
 
- 
+    <button (tap)="encontrarTask()" class="boton" text="Encontrar tarea"></button>
 
+
+</StackLayout>

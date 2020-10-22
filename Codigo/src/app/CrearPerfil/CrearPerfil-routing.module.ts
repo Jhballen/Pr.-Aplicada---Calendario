@@ -2,14 +2,14 @@ import { NgModule } from "@angular/core";
 import { Routes } from "@angular/router";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 
-import { FeaturedComponent } from "./featured.component";
+import { CrearPerfilComponent } from "./CrearPerfil.component";
 
 const routes: Routes = [
-    { path: "", component: FeaturedComponent }
+    { path: "", component: CrearPerfilComponent }
 ];
 
 @NgModule({
     imports: [NativeScriptRouterModule.forChild(routes)],
     exports: [NativeScriptRouterModule]
 })
-export class FeaturedRoutingModule { }
+export class CrearPerfilRoutingModule { }
