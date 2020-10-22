@@ -10,7 +10,7 @@ const routes: Routes = [
     { path: "browse", loadChildren: () => import("~/app/browse/browse.module").then((m) => m.BrowseModule) },
     { path: "search", loadChildren: () => import("~/app/search/search.module").then((m) => m.SearchModule) },
     { path: "VerPerfiles", loadChildren: () => import("~/app/VerPerfiles/VerPerfiles.module").then((m) => m.VerPerfilesModule) },
-   { path: "CrearPerfil", loadChildren: () => import("~/app/CrearPerfil/CrearPerfil.module").then((m) => m.CrearPerfilModule) },
+    { path: "CrearPerfil", loadChildren: () => import("~/app/CrearPerfil/CrearPerfil.module").then((m) => m.CrearPerfilModule) },
     { path: "tareas", loadChildren: () => import("~/app/tareas/tareas.module").then((m) => m.tareasModule) },
     { path: "crear-tarea", loadChildren: () => import("~/app/crear-tareas/crear-tarea.module").then((m) => m.crearTareaModule)},
     { path: "task-done", loadChildren: () => import("~/app/task-done/task-done.module").then((m) => m.taskDoneModule) }
