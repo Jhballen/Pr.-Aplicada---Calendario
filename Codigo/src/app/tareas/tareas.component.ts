@@ -74,6 +74,12 @@ export class tareasComponent implements OnInit {
         this.onNavigate();
     }
 
+    enviarTask(task: Task) {
+        console.log(task.title);
+        this.router.navigate(['./tarea-detalle']);
+        enviroment.task = task;
+    }
+
     public onNavigate() {
 
         this.router.navigate(['./home']);

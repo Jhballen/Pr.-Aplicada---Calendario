@@ -39,5 +39,4 @@ export class TaskService {
         return this.http.put (`${enviroment.urlApi}/task/${task._id}`, task)
     }
 
-
 }
