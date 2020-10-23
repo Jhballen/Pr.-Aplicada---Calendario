@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { RouterExtensions } from "nativescript-angular";
 import { RadSideDrawer } from "nativescript-ui-sidedrawer";
 import * as app from "tns-core-modules/application";
 import { enviroment } from "~/environment/env";
@@ -14,7 +15,7 @@ export class CrearPerfilComponent implements OnInit {
 
     perfil: Profile;
 
-    constructor(private profileService: ProfileService) {
+    constructor(private profileService: ProfileService,private router: RouterExtensions) {
         this.perfil = new Profile();
     }
 
@@ -32,7 +33,7 @@ export class CrearPerfilComponent implements OnInit {
                 }
             )
         }
-
+        this.router.navigate(['VerPerfiles']);
     }
 
     ngOnInit(): void {

@@ -16,14 +16,14 @@ import { ProfileService } from "../services/profile_service/profile.service";
 export class VerPerfilesComponent implements OnInit {
 
     perfiles: Array<Profile>;
-    spaceList: String
+    spaceList: String;
 
     constructor(
         private _page: Page,
         private router: RouterExtensions,
         private profileService: ProfileService) {
         this._page.actionBarHidden = true;
-        this.spaceList = "";
+        this.spaceList = "100";
         this.perfiles = new Array<Profile>();
     }
 
@@ -31,6 +31,7 @@ export class VerPerfilesComponent implements OnInit {
         const sideDrawer = <RadSideDrawer>app.getRootView();
         sideDrawer.gesturesEnabled=false;
         this.loadDataBase();
+        
     }
 
     async loadDataBase(){
@@ -40,9 +41,26 @@ export class VerPerfilesComponent implements OnInit {
                 enviroment.profile = res[0];
             }
         )
-        
+        await this.delay(300);
+        this.createSpaceList();
     }
 
+    createSpaceList(){
+        this.spaceList=""
+        
+        for(let i=0;i<this.perfiles.length ;i++){
+            
+
+            this.spaceList += " 100"; 
+        }
+                
+            
+        
+    }
+    private delay(ms: number)
+    {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
 
     onDrawerButtonTap(): void {
     
@@ -50,7 +68,7 @@ export class VerPerfilesComponent implements OnInit {
 
     ingreso(profile: Profile){
         console.log(enviroment.profile)
-        this.router.navigate(['home']);
+        this.router.navigate(['VerPerfiles']);
     }
     addPerfil(){
         this.router.navigate(['CrearPerfil']);
