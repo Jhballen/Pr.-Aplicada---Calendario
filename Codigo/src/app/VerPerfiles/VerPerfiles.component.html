@@ -7,14 +7,13 @@
 
     <StackLayout class="cajaPerfiles">
         <ScrollView orientation="vertical">
-            <GridLayout rows={{spaceList}}> 
-                <FlexboxLayout *ngFor='let perfil of perfiles' alignItems="center" class="flex"
-                row={{perfiles.indexOf(perfil)}} backgroundcolor="lightgray">
+            <GridLayout rows="{{spaceList}}"> 
+                
+                <FlexboxLayout *ngFor='let perfil of perfiles' alignItems="center" class="flex" row={{perfiles.indexOf(perfil)}} (tap)="ingreso(perfil)" backgroundcolor="lightgray">
                     <Image class="user" src="~/Recursos/user1.png"></Image>
-                    <label class="labelUser" text="{{perfil.name}}"></label>
-                    
+                    <label class="labelUser" text="{{perfil.name}}"></label> 
                 </FlexboxLayout>
-                      
+                
             </GridLayout>
 
         </ScrollView>

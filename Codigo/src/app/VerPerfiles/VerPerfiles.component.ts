@@ -38,7 +38,6 @@ export class VerPerfilesComponent implements OnInit {
         this.profileService.getProfile(enviroment.user._id).subscribe(
             (res)=>{
                 this.perfiles = res;
-                enviroment.profile = res[0];
             }
         )
         await this.delay(300);
@@ -47,19 +46,14 @@ export class VerPerfilesComponent implements OnInit {
 
     createSpaceList(){
         this.spaceList=""
-        
         for(let i=0;i<this.perfiles.length ;i++){
-            
-
             this.spaceList += " 100"; 
         }
-                
-            
-        
     }
+
     private delay(ms: number)
     {
-      return new Promise(resolve => setTimeout(resolve, ms));
+        return new Promise(resolve => setTimeout(resolve, ms));
     }
 
     onDrawerButtonTap(): void {
@@ -67,8 +61,8 @@ export class VerPerfilesComponent implements OnInit {
     }
 
     ingreso(profile: Profile){
-        console.log(enviroment.profile)
-        this.router.navigate(['VerPerfiles']);
+        enviroment.profile = profile;
+        this.router.navigate(['home']);
     }
     addPerfil(){
         this.router.navigate(['CrearPerfil']);

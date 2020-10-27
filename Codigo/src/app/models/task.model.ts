@@ -5,5 +5,7 @@ export class Task {
     title: String;
     description: String;
     status: Number;
+    endDate: Date;
+    evidence: String;
     profile: [String];
 };
