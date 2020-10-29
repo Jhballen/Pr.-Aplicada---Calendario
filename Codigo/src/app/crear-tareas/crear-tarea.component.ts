@@ -19,6 +19,7 @@ import { enviroment } from '~/environment/env';
 export class crearTareaComponent implements OnInit{
 
     newTarea: Task;
+    fecha: any;
 
     constructor(
         private taskService: TaskService,
@@ -36,9 +37,10 @@ export class crearTareaComponent implements OnInit{
 
 
     createTask(){
+        
+        console.log("-->",this.newTarea.endDate);
         this.newTarea.status = 0;
-        this.newTarea.users = enviroment.user;
-        console.log(this.newTarea)
+        this.newTarea.profile = [enviroment.profile._id];
         this.taskService.createTask(this.newTarea);
         this.onNavigate();
     }

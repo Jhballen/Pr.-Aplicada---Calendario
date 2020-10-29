@@ -21,28 +21,18 @@
         <Image class="corazon" src="~/Recursos/corazon.png"></Image>
         <GridLayout columns="3*, 1*" class="progressbar">
             <StackLayout col="0" class="barra2"></StackLayout>
-        </GridLayout>
+          </GridLayout>
     </FlexboxLayout>
     
 </ActionBar>
 
-<StackLayout class="form" >
+<StackLayout class="caja" width="340" height="200" >
     
-    <label class="header" text="Nueva Tarea"></label>
+    <label class="Fsotaa" text="Tarea Detalle"></label>
+    <label class="detalle" text="Titulo:"></label>
+    <label text="{{task.title}}"></label>
+    <label class="detalle" text="Descripción:"></label>
+    <label text="{{task.description}}"></label>
+  </StackLayout>
 
-    <StackLayout class="tarea" >
-        <TextField [(ngModel)]="newTarea.title" class="entradaUser" hint="Titulo"></TextField>
-        <br>
-        <TextField [(ngModel)]="newTarea.description" class="entradaUser" hint="Descripción"></TextField>
-    </StackLayout>
-
-    <StackLayout class="tarea" >
-        <label class ="label1" text="Fecha Limite:"></label>
-        <DatePicker [(ngModel)]="newTarea.endDate" minDate="2020-01-01" maxDate="2100-12-31"></DatePicker>
-    </StackLayout>
-    
-    <StackLayout>
-        <button class="botonCrear" (tap)="createTask()" text="Crear"></button>
-    </StackLayout>
-</StackLayout>
-
+  

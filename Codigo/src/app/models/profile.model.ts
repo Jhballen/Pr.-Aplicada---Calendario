@@ -1,7 +1,9 @@
-import { Task } from "./task.model";
+import { Task } from "../models/task.model";
 
-export class profile {
-    name: string;
-    tasks: [Task];
+export class Profile {
+    _id: String;
+    name: String;
     profilePicture: number;
-}
+    task: [Task];
+    userId: string;
+};

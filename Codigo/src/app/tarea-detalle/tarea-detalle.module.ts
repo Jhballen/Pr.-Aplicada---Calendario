@@ -1,19 +1,18 @@
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptCommonModule } from "nativescript-angular/common";
-
-import { FeaturedRoutingModule } from "./featured-routing.module";
-import { FeaturedComponent } from "./featured.component";
+import { tareaDetalleRoutingModule } from "./tarea-detalle.routing.module";
+import { tareaDetalleComponent } from "./tarea-detalle.component";
 
 @NgModule({
     imports: [
         NativeScriptCommonModule,
-        FeaturedRoutingModule
+        tareaDetalleRoutingModule
     ],
     declarations: [
-        FeaturedComponent
+        tareaDetalleComponent
     ],
     schemas: [
         NO_ERRORS_SCHEMA
     ]
 })
-export class FeaturedModule { }
+export class tareaDetalleModule { }

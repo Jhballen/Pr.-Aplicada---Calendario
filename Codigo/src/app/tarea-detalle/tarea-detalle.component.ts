@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 import { RadSideDrawer } from "nativescript-ui-sidedrawer";
 import * as app from "tns-core-modules/application";
 import { RouterExtensions } from 'nativescript-angular/router';
@@ -8,53 +8,36 @@ import { enviroment } from '~/environment/env';
 import { User } from "../models/user.model";
 
 @Component({
-    selector: "task-done",
-    templateUrl: "./task-done.component.html",
-    styleUrls: ["./task-done.component.css"]
+    selector: "tarea-detalle",
+    templateUrl: "./tarea-detalle.component.html",
+    styleUrls: ["./tarea-detalle.component.css"]
 
 })
-export class taskDoneComponent implements OnInit {
+export class tareaDetalleComponent implements OnInit {
 
-    spaceList: String;
-    tasks: Array<Task>;
-    task: Task;
-    userTasks: Array<Task>;
+    
+    task:Task;
     constructor(private router: RouterExtensions,
         private taskService: TaskService) {
         // Use the component constructor to inject providers.
-        this.userTasks = new Array<Task>();
-        this.spaceList = "";
+        this.task = new Task();
     }
 
 
     public ngOnInit(): void {
-       this.updateList();        
+        this.task = enviroment.task;
     }
 
-    updateList(){
-        this.taskService.getAllTasks().subscribe(task => {
-            this.tasks = task;
-        });
-    }
+   
 
     onDrawerButtonTap(): void {
         const sideDrawer = <RadSideDrawer>app.getRootView();
         sideDrawer.showDrawer();
     }
 
-    crearTarea() {
-        this.router.navigate(['crear-tarea']);
-    }
+    
 
-    encontrarTask() {
-        this.tasks.forEach(task => {
-
-            if(task.profile[0]==enviroment.profile._id && task.status == 1){
-                this.userTasks.push(task);
-                this.spaceList += " 50"; 
-            }
-        });
-    }
+    
 
     changeStatus(task: Task){
         if(task.status == 0){
@@ -73,13 +56,6 @@ export class taskDoneComponent implements OnInit {
         this.taskService.delete(task._id);
         this.onNavigate();
     }
-
-    enviarTask(task: Task) {
-        console.log(task.title);
-        this.router.navigate(['./tarea-detalle']);
-        enviroment.task = task;
-    }
-
 
     public onNavigate() {
 
