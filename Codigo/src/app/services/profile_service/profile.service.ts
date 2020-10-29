@@ -21,4 +21,8 @@ export class ProfileService {
         return this.http.get <Profile[]> (`${enviroment.urlApi}/profile/${userId}`)
     }
 
+    putProfile(profile: Profile){
+        return this.http.put(`${enviroment.urlApi}/profile/${profile._id}`, profile)
+    }
+
 }

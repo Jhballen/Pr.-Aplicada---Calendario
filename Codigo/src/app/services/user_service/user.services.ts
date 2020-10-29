@@ -26,6 +26,9 @@ export class UserService {
             }
         );
     }
+    putUser(user: User){
+        return this.http.put (`${enviroment.urlApi}/user/${user._id}`, user)
+    }
 
     shearUser(name:String, pass: String){
         return this.http.get <User> (`${enviroment.urlApi}/user/${name}`);
