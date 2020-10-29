@@ -1,4 +1,5 @@
 import { Task } from "./task.model";
+import { Profile } from "./profile.model";
 
 export class User {
     _id: string;
@@ -7,4 +8,5 @@ export class User {
     profilePicture: number;
     type: String;
     tasks: [Task];
+    profile: [Profile];
 }
