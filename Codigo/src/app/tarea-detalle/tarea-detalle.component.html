@@ -26,13 +26,14 @@
     
 </ActionBar>
 
-<StackLayout class="caja" width="340" height="200" >
+<StackLayout class="caja" width="80%" height="80%" >
     
     <label class="Fsotaa" text="Tarea Detalle"></label>
     <label class="detalle" text="Titulo:"></label>
     <label text="{{task.title}}"></label>
     <label class="detalle" text="Descripción:"></label>
     <label text="{{task.description}}"></label>
+    <label class="detalle" text="Fecha Limite:"></label>
+    <label text="{{task.endDate | date}}"></label>
+    <button class="botonModificar" (tap)="modificarTask()" text="Modificar"></button>
   </StackLayout>
-
-  

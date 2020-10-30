@@ -17,10 +17,12 @@ export class tareaDetalleComponent implements OnInit {
 
     
     task:Task;
+    
     constructor(private router: RouterExtensions,
         private taskService: TaskService) {
         // Use the component constructor to inject providers.
         this.task = new Task();
+    
     }
 
 
@@ -62,4 +64,9 @@ export class tareaDetalleComponent implements OnInit {
         this.router.navigate(['./home']);
 
     }
+
+    modificarTask() {
+        this.router.navigate(['tarea-modificar']);
+    }
+
 }

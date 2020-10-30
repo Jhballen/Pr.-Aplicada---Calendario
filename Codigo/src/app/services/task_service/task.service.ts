@@ -36,6 +36,7 @@ export class TaskService {
     }​​
 
     putTask(task: Task) {
+        console.log(task);
         return this.http.put (`${enviroment.urlApi}/task/${task._id}`, task)
     }
 

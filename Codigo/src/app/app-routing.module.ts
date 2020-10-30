@@ -15,7 +15,8 @@ const routes: Routes = [
     { path: "crear-tarea", loadChildren: () => import("~/app/crear-tareas/crear-tarea.module").then((m) => m.crearTareaModule)},
     { path: "task-done", loadChildren: () => import("~/app/task-done/task-done.module").then((m) => m.taskDoneModule) },
     { path: "task-done", loadChildren: () => import("~/app/task-done/task-done.module").then((m) => m.taskDoneModule) },
-    { path: "tarea-detalle", loadChildren: () => import("~/app/tarea-detalle/tarea-detalle.module").then((m) => m.tareaDetalleModule) }
+    { path: "tarea-detalle", loadChildren: () => import("~/app/tarea-detalle/tarea-detalle.module").then((m) => m.tareaDetalleModule)},
+    { path: "tarea-modificar", loadChildren: () => import("~/app/tarea-modificar/tarea-modificar.module").then((m) => m.tareaModificarModule) }
 ];
 
 @NgModule({

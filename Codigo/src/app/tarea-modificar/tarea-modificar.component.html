@@ -26,25 +26,30 @@
     
 </ActionBar>
 
-<StackLayout class="form" >
+<StackLayout class="caja" width="80%" height="80%" >
     
-    <label class="header" text="Nueva Tarea"></label>
+    <label class="Fsotaa" text="Modificar Tarea:"></label>
+    <label class="detalle" text="Titulo:"></label>
+    <TextField [(ngModel)]="task.title" class="entradaUser" hint="{{task.title}}"></TextField>
+    <label class="detalle" text="Descripción:"></label>
+    <TextField [(ngModel)]="task.description" class="entradaUser" hint="{{task.description}}"></TextField>
+    <label class="detalle" text="Fecha limite:"></label>
+    <DatePicker [(ngModel)]="task.endDate" minDate="2020-01-01" maxDate="2100-12-31"></DatePicker>
+    <label class="detalle" text="Estado de la Tarea:"></label>
+    <label class="estatus" text="{{estatus}}"></label>
 
-    <StackLayout class="tarea" >
-        <TextField [(ngModel)]="newTarea.title" class="entradaUser" hint="Titulo"></TextField>
-        <br>
-        <TextField [(ngModel)]="newTarea.description" class="entradaUser" hint="Descripción"></TextField>
-    </StackLayout>
-
-    <StackLayout class="tarea" >
-        <label class ="label1" text="Fecha Limite:"></label>
-        <DatePicker [(ngModel)]="newTarea.endDate" minDate="2020-01-01" maxDate="2100-12-31"></DatePicker>
-    </StackLayout>
     
-    <StackLayout>
-        <button class="botonCrear" (tap)="createTask()" text="Crear"></button>
-    </StackLayout>
+
+  </StackLayout>
+
+  <StackLayout class="cajaVik" width="340" height="140" orientation="horizontal">
+
+     
+    <button class="botonActualizar" (tap)="actualizarTask()" text="Actualizar"></button>
+    <button class="botonVerificar" (tap)="verificarTask()" text="Verificar"></button>
+    <button class="botonEliminar" (tap)="eliminarTask()" text="Eliminar"></button>
+
+
 </StackLayout>
 
-  
 
