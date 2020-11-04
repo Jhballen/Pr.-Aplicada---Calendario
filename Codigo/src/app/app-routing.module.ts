@@ -7,7 +7,7 @@ const routes: Routes = [
     { path: "login", loadChildren: () => import("~/app/login/login.module").then((m) => m.loginModule) },
     { path: "registro", loadChildren: () => import("~/app/registro/registro.module").then((m) => m.registroModule) },
     { path: "home", loadChildren: () => import("~/app/home/home.module").then((m) => m.HomeModule) },
-    { path: "browse", loadChildren: () => import("~/app/browse/browse.module").then((m) => m.BrowseModule) },
+    { path: "EditarPerfil", loadChildren: () => import("~/app/EditarPerfil/EditarPerfil.module").then((m) => m.EditarPerfilModule) },
     { path: "search", loadChildren: () => import("~/app/search/search.module").then((m) => m.SearchModule) },
     { path: "VerPerfiles", loadChildren: () => import("~/app/VerPerfiles/VerPerfiles.module").then((m) => m.VerPerfilesModule) },
     { path: "CrearPerfil", loadChildren: () => import("~/app/CrearPerfil/CrearPerfil.module").then((m) => m.CrearPerfilModule) },

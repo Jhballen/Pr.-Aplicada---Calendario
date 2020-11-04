@@ -1,0 +1,31 @@
+<ActionBar>
+    <!-- 
+    Use the NavigationButton as a side-drawer button in Android
+    because ActionItems are shown on the right side of the ActionBar
+    -->
+    <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+    <!-- 
+    Use the ActionItem for IOS with position set to left. Using the
+    NavigationButton as a side-drawer button in iOS is not possible,
+    because its function is to always navigate back in the application.
+    -->
+    <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()" ios.position="left">
+    </ActionItem>
+    <Label></Label>
+</ActionBar>
+
+
+
+
+<StackLayout class="form">
+
+    <label class="header" text="Editar Perfil"></label>
+
+    <StackLayout class="tarea" style="padding-bottom: 100;">
+        <TextField [(ngModel)]="nuevoNombre" class="entradaUser" hint="{{perfil.name}}"></TextField>
+    </StackLayout>
+
+    <StackLayout>
+        <button class="botonCrear" (tap)="confirmarEdicion()" text="Confirmar"></button>
+    </StackLayout>
+</StackLayout>

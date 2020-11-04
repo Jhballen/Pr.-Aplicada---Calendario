@@ -1,19 +1,26 @@
 <StackLayout backgroundColor="black">
-    <GridLayout columns="100,100,100,100,100" rows="auto" verticalAlignment="center" style="align-content: center;">
-        <Image class="imgHeader" src="~/Recursos/logo.png" row="1" col="1"></Image>
-        <label class="labelHeader" horizontalAlignment="left" row="1" col="2" text="TIMEPOINT"></label>
-        <Image class="imgplus" src="~/Recursos/mas.png" row="1" col="3"  (tap)="addPerfil()"></Image>
-    </GridLayout>
 
+    <div  class="divi">
+
+        <label class="labelHeader"  text="TIMEPOINT"></label>
+        <Image class="imgHeader" src="~/Recursos/logo.png" ></Image>
+        
+        <Image class="imgplus" src="~/Recursos/mas.png" (tap)="addPerfil()"></Image>
+
+    </div>
     <StackLayout class="cajaPerfiles">
         <ScrollView orientation="vertical">
-            <GridLayout rows="{{spaceList}}"> 
-                
-                <FlexboxLayout *ngFor='let perfil of perfiles' alignItems="center" class="flex" row={{perfiles.indexOf(perfil)}} (tap)="ingreso(perfil)" backgroundcolor="lightgray">
-                    <Image class="user" src="~/Recursos/user1.png"></Image>
-                    <label class="labelUser" text="{{perfil.name}}"></label> 
+            <GridLayout rows="{{spaceList}}">
+
+                <FlexboxLayout *ngFor='let perfil of perfiles' alignItems="center" class="flex"
+                    row={{perfiles.indexOf(perfil)}} backgroundcolor="lightgray">
+                    <Image class="user" src="~/Recursos/user1.png" (tap)="ingreso(perfil)"></Image>
+                    <label class="labelUser" text="{{perfil.name}}" (tap)="ingreso(perfil)"></label>
+                    <Image class="iconDelete" src="~/Recursos/delete.png" (tap)="deleteTask(task)"></Image>
+                    <Image class="iconEdit" src="~/Recursos/editarP.png" (tap)="editarP(perfil)"></Image>
+
                 </FlexboxLayout>
-                
+
             </GridLayout>
 
         </ScrollView>

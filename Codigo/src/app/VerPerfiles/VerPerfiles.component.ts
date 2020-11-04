@@ -40,7 +40,7 @@ export class VerPerfilesComponent implements OnInit {
                 this.perfiles = res;
             }
         )
-        await this.delay(300);
+        await this.delay(1300);
         this.createSpaceList();
     }
 
@@ -66,6 +66,11 @@ export class VerPerfilesComponent implements OnInit {
     }
     addPerfil(){
         this.router.navigate(['CrearPerfil']);
-        console.log('si sirve');
+        
+    }
+    editarP(profile: Profile){
+        enviroment.profile = profile;
+        this.router.navigate(['EditarPerfil']);
+        console.log(profile.name);
     }
 }
