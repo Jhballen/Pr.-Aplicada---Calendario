@@ -73,4 +73,9 @@ export class VerPerfilesComponent implements OnInit {
         this.router.navigate(['EditarPerfil']);
         console.log(profile.name);
     }
+    eliminarP(profile: Profile){
+        
+        //AQUI VA EL METODO PARA PODER ELIMINAR EL PERFIL CREADO
+
+    }
 }

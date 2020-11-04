@@ -15,7 +15,15 @@
                     row={{perfiles.indexOf(perfil)}} backgroundcolor="lightgray">
                     <Image class="user" src="~/Recursos/user1.png" (tap)="ingreso(perfil)"></Image>
                     <label class="labelUser" text="{{perfil.name}}" (tap)="ingreso(perfil)"></label>
-                    <Image class="iconDelete" src="~/Recursos/delete.png" (tap)="deleteTask(task)"></Image>
+
+
+
+                    <Image class="iconDelete" src="~/Recursos/delete.png" (tap)="eliminarP(perfil)"></Image> 
+
+
+
+
+
                     <Image class="iconEdit" src="~/Recursos/editarP.png" (tap)="editarP(perfil)"></Image>
 
                 </FlexboxLayout>
