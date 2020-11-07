@@ -1,20 +1,20 @@
 <ActionBar>
-    <!-- 
+    <!--
     Use the NavigationButton as a side-drawer button in Android
     because ActionItems are shown on the right side of the ActionBar
     -->
     <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
-    <!-- 
+    <!--
     Use the ActionItem for IOS with position set to left. Using the
     NavigationButton as a side-drawer button in iOS is not possible,
     because its function is to always navigate back in the application.
     -->
-    
+
     <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
         ios.position="left">
     </ActionItem>
-    
-    
+
+
     <FlexboxLayout alignItems="center"  >
         <Image class="corazon" src="~/Recursos/corazon.png" ></Image>
         <Image class="corazon" src="~/Recursos/corazon.png"></Image>
@@ -23,12 +23,12 @@
             <StackLayout col="0" class="barra2"></StackLayout>
           </GridLayout>
     </FlexboxLayout>
-    
+
 </ActionBar>
 
 <StackLayout class="caja" width="340" height="200" >
-    
-    
+
+
     <ScrollView orientation="vertical">
         <GridLayout rows="50 50 50 50 50 50 50 50 50">
             <FlexboxLayout alignItems="center" class="flex" row="0" backgroundcolor="lightgray" >
@@ -111,16 +111,16 @@
                 <GridLayout columns="2*, 2*" class="progressbar2">
                     <StackLayout col="0" class="barra"></StackLayout>
                 </GridLayout>
-            </FlexboxLayout>    
+            </FlexboxLayout>
         </GridLayout>
     </ScrollView>
-    
+
   </StackLayout>
 
   <StackLayout class="cajaa" >
 
     <label class="Fsotaa" text="Tareas"> </label>
-  
+
   </StackLayout>
   <StackLayout class="cajaa2" width="340" height="200">
     <ScrollView orientation="vertical">
@@ -128,18 +128,18 @@
             <FlexboxLayout *ngFor='let task of userTasks' alignItems="center" class="flex" row={{userTasks.indexOf(task)}} backgroundcolor="lightgray" >
                 <Image class="user" src="~/Recursos/user1.png" ></Image>
                 <label class="titleText" text="{{task.title}}"></label>
-                <Image  class="imageLeft" src="~/Recursos/delete.png" (tap)="deleteTask(task)" ></Image>
-                <Image   src="~/Recursos/tick.png" (tap)="changeStatus(task)" ></Image>
-                <Image   src="~/Recursos/detalle.jpg" (tap)="enviarTask(task)" ></Image>
+                <Image  class="imageLeft" src="~/Recursos/eliminarTarea.png" (tap)="deleteTask(task)" ></Image>
+                <Image   src="~/Recursos/tickk.png" (tap)="changeStatus(task)" ></Image>
+                <Image   src="~/Recursos/Detalles.jpg" (tap)="enviarTask(task)" ></Image>
             </FlexboxLayout>
-            
+
         </GridLayout>
-    </ScrollView> 
+    </ScrollView>
   </StackLayout>
 
-  
-  <StackLayout class="cajaVik" width="340" height="140" orientation="horizontal"> 
-    
+
+  <StackLayout class="cajaVik" width="340" height="140" orientation="horizontal">
+
     <button (tap)="encontrarTask()" class="boton" text="Tareas Terminadas"></button>
 
 
