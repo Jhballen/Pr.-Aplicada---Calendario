@@ -1,5 +1,5 @@
 .corazon{
-    
+
     width: 60;
     height: 60;
     align-self: center;
@@ -15,14 +15,14 @@
     background-image: url("~/Recursos/user1.png");
     background-repeat: no-repeat;
     background-size:cover;
-    
+
 }
 .cajaVik3{
-    
+
     background-image: url("~/Recursos/user1.png");
     background-repeat: no-repeat;
     background-size:cover;
-    
+
 }
 .chulo{
     border-color: blue;
@@ -66,12 +66,12 @@
     margin: 10;
     border-radius: 10;
     background-color: #ECEFF1;
-    
+
 }
 
 
 .flex{
-    
+
     border-top: black;
     border-top-width: 2;
     border-bottom: black;
@@ -80,7 +80,7 @@
 
 .user{
     margin:6;
-    
+
 }
 .caja{
     margin-bottom: 5%;
@@ -90,7 +90,7 @@
     border-color: black;
 }
 .cajaBt{
-   
+
     margin-bottom: 380;
 }
 .cajaa{
@@ -113,7 +113,7 @@
     font-style: italic;
     color: blue;
     text-transform: uppercase;
-       
+
 }
 
 .detalle{
@@ -123,7 +123,7 @@
     font-style: italic;
     color:blueviolet;
     text-transform: uppercase;
-       
+
 }
 .boton {
     margin-top: 30;
@@ -152,7 +152,7 @@
     position: relative;
 }
 .titleText{
-    
+
     margin-left: 10;
     margin-right: 100;
 }

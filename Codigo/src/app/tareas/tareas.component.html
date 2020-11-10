@@ -1,10 +1,10 @@
 <ActionBar>
-    <!-- 
+    <!--
     Use the NavigationButton as a side-drawer button in Android
     because ActionItems are shown on the right side of the ActionBar
     -->
     <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
-    <!-- 
+    <!--
     Use the ActionItem for IOS with position set to left. Using the
     NavigationButton as a side-drawer button in iOS is not possible,
     because its function is to always navigate back in the application.
@@ -29,7 +29,7 @@
     <button (tap)="crearTarea()" class="boton" text="Crear Tarea"></button>
 </StackLayout>
 
-<StackLayout class="caja" width="340" height="200">
+<StackLayout class="caja" width="340" height="180">
 
 
     <ScrollView orientation="vertical">
@@ -132,9 +132,9 @@
                 row={{userTasks.indexOf(task)}} backgroundcolor="lightgray">
                 <Image class="user" src="~/Recursos/user1.png"></Image>
                 <label class="titleText" text="{{task.title}}"></label>
-                <Image class="imageLeft" src="~/Recursos/delete.png" (tap)="deleteTask(task)"></Image>
-                <Image src="~/Recursos/inter.png" (tap)="changeStatus(task)"></Image>
-                <Image   src="~/Recursos/detalle.jpg" (tap)="enviarTask(task)" ></Image>
+                <Image class="imageLeft" src="~/Recursos/eliminarTarea.png" (tap)="deleteTask(task)"></Image>
+                <Image src="~/Recursos/tareaCompletada.png" (tap)="changeStatus(task)"></Image>
+                <Image   src="~/Recursos/detalleTarea.jpg" (tap)="enviarTask(task)" ></Image>
             </FlexboxLayout>
 
         </GridLayout>
@@ -145,6 +145,7 @@
 <StackLayout class="cajaVik" width="340" height="140" orientation="horizontal">
 
     <button (tap)="encontrarTask()" class="boton" text="Encontrar tarea"></button>
+    <button (tap)="encontrarTask()" class="boton" text="Terminadas"></button>
 
 
 </StackLayout>

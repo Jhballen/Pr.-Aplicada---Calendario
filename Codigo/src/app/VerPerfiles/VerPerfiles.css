@@ -11,7 +11,7 @@
     color: white;
     font-weight: bold;
     float: left;
-    
+
 }
 
 .cajaPerfiles{
@@ -24,7 +24,7 @@
 }
 
 .flex{
-    
+
     border-top: black;
     border-top-width: 2;
     border-bottom: black;
@@ -48,7 +48,7 @@
 .iconDelete{
     width: 50;
     height: 50;
-    
+
 }
 .iconEdit{
     width: 50;
