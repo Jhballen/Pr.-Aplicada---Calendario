@@ -22,7 +22,11 @@ export class ProfileService {
     }
 
     putProfile(profile: Profile){
-        return this.http.put(`${enviroment.urlApi}/profile/${profile._id}`, profile)
+        console.log("envio", profile)
+        return this.http.put(`${enviroment.urlApi}/profile/`, profile)
     }
 
+    deleteProfile(profile: Profile){
+        return this.http.delete(`${enviroment.urlApi}/profile/${profile._id}`)
+    }
 }

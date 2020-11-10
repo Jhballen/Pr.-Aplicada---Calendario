@@ -22,10 +22,10 @@
     <label class="header" text="Editar Perfil"></label>
 
     <StackLayout class="tarea" style="padding-bottom: 100;">
-        <TextField [(ngModel)]="nuevoNombre" class="entradaUser" hint="{{perfil.name}}"></TextField>
+        <TextField [(ngModel)]="perfil.name" class="entradaUser" hint="{{perfil.name}}"></TextField>
     </StackLayout>
 
     <StackLayout>
-        <button class="botonCrear" (tap)="confirmarEdicion()" text="Confirmar"></button>
+        <button class="botonCrear" (tap)="confirmarEdicion(perfil)" text="Confirmar"></button>
     </StackLayout>
 </StackLayout>
