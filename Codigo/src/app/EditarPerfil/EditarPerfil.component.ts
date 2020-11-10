@@ -14,7 +14,6 @@ import { ProfileService } from "../services/profile_service/profile.service";
 export class EditarPerfilComponent implements OnInit {
 
     perfil: Profile;
-    nuevoNombre: String; // VARIABLE PARA QUE LA USEN PARA MODIFICAR EL NOMBRE EN EL BACKEND
 
     constructor(private profileService: ProfileService,private router: RouterExtensions) {
         this.perfil = new Profile();
@@ -23,9 +22,12 @@ export class EditarPerfilComponent implements OnInit {
 
 
 
-    confirmarEdicion(){
-        
-        //ACA IRIA EL METODO DEL BACKEND PARA CONFIRMAR LA MODIFICACION DEL NOMBRE DEL PERFIL
+    confirmarEdicion(profile: Profile){
+        this.profileService.putProfile(profile).subscribe(
+            (res)=>{
+                this.router.navigate(['VerPerfiles']);
+            }
+        );
 
     }
 

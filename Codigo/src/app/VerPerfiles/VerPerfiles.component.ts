@@ -66,16 +66,22 @@ export class VerPerfilesComponent implements OnInit {
     }
     addPerfil(){
         this.router.navigate(['CrearPerfil']);
-        
+        this.loadDataBase();
     }
     editarP(profile: Profile){
         enviroment.profile = profile;
         this.router.navigate(['EditarPerfil']);
-        console.log(profile.name);
     }
     eliminarP(profile: Profile){
-        
-        //AQUI VA EL METODO PARA PODER ELIMINAR EL PERFIL CREADO
+        this.profileService.deleteProfile(profile).subscribe(
+            (res)=>{
+                console.log(res)
+            }
+        );
+        this.loadDataBase();
+    }
 
+    actualizar(){
+        this.loadDataBase();
     }
 }
